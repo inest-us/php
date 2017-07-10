@@ -15,9 +15,14 @@
 
         public function create_hash($value)
         {
-
+            return $hash = crypt($value, '$2a$12.substr(str_replace(' + ', ' . ', base64_encode(sha1(microtime(true), true))), 0, 22)');
         }
-        
+
+        private function verify_hash($password,$hash)
+        {
+            return $hash == crypt($password, $hash);
+        }
+
         private function get_user_hash($username) {  
             try {
                 $stmt = $this->_db->prepare('SELECT password FROM blog_members WHERE username = :username');
@@ -47,6 +52,10 @@
                 return true;
             }
             return false;       
+        }
+
+        public function logout() {
+            session_destroy();
         }
     }
 ?>
