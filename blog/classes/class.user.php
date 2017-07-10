@@ -13,6 +13,11 @@
             return false;       
         }
 
+        public function create_hash($value)
+        {
+
+        }
+        
         private function get_user_hash($username) {  
             try {
                 $stmt = $this->_db->prepare('SELECT password FROM blog_members WHERE username = :username');
