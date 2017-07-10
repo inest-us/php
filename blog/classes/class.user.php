@@ -2,7 +2,7 @@
     class User {
         private $_db;
 
-        public function __construct($db){
+        public function __construct($db) {
             $this->_db = $db; 
         }
 
@@ -35,12 +35,14 @@
         public function login($username, $password) { 
             $hashed = $this->get_user_hash($username);
             if (!$hashed) {
+                $_SESSION['loggedin'] = false;
                 return false;
             }
             if($this->password_verify($password,$hashed) == 1) {
                 $_SESSION['loggedin'] = true;
                 return true;
             }
+            $_SESSION['loggedin'] = false;
             return false;       
         }
     }
