@@ -16,6 +16,7 @@
         $row = $stmt->fetch();
 
         if($row['postID'] == '') {
+            //it there is no post, fallback to home page
             header('Location: ./');
             exit;
         }

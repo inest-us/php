@@ -16,3 +16,7 @@ CREATE TABLE `sampledb`.`blog_members` (
 insert into blog_posts(postTitle, postDesc, postContent, postDate)
 values
 ('post 1', 'test post number 1', 'this is my test post.', '2017-07-08');
+
+insert into blog_members(username, password, email) 
+values
+('user1', 'password1', 'user1@ebay.com')
