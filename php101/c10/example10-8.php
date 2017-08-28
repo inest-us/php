@@ -1,20 +1,17 @@
 <?php 
-require_once 'example10-1.php';
+require_once 'login.php';
 
-$db_server = mysql_connect($db_hostname, $db_username, $db_password);
-if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
-
-mysql_select_db($db_database, $db_server) or die("Unable to select database: " . mysql_error());
+$conn = new PDO("mysql:host=$db_hostname;dbname=$db_database", $db_username, $db_password);
+// set the PDO error mode to exception
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 if (isset($_POST['delete']) && isset($_POST['isbn']))
 {
 	$isbn  = get_post('isbn');
-	$query = "DELETE FROM classics WHERE isbn='$isbn'";
+	$sql = "DELETE FROM classics WHERE isbn='$isbn'";
 
-	if (!mysql_query($query, $db_server)) {
-		echo "DELETE failed: <br />" .
-		mysql_error() . "<br /><br />";
-	}	
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
 }
 
 if (isset($_POST['author']) &&
@@ -29,13 +26,10 @@ if (isset($_POST['author']) &&
 	$year     = get_post('year');
 	$isbn     = get_post('isbn');
 
-	$query = "INSERT INTO classics VALUES" .
-		"('$author', '$title', '$category', '$year', '$isbn')";
-
-	if (!mysql_query($query, $db_server)) {
-		echo "INSERT failed: <br />" .
-		mysql_error() . "<br /><br />";
-	}
+	echo "author: " . $author . "<br />";
+	$sql = "INSERT INTO classics VALUES ('$author', '$title', '$category', '$year', '$isbn')";
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
 }
 
 echo <<<_END
@@ -49,34 +43,28 @@ Category <input type="text" name="category" />
 </pre></form>
 _END;
 
-$query = "SELECT * FROM classics";
-$result = mysql_query($query);
+$sql = "SELECT * FROM classics";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
 
-if (!$result) die ("Database access failed: " . mysql_error());
-$rows = mysql_num_rows($result);
-
-for ($j = 0 ; $j < $rows ; ++$j)
+while ($row = $stmt->fetch()) 
 {
-	$row = mysql_fetch_row($result);
-	echo <<<_END
-<pre>
-  Author $row[0]
-   Title $row[1]
-Category $row[2]
-    Year $row[3]
-    ISBN $row[4]
-</pre>
-<form action="example10-8.php" method="post">
-<input type="hidden" name="delete" value="yes" />
-<input type="hidden" name="isbn" value="$row[4]" />
-<input type="submit" value="DELETE RECORD" /></form>
-_END;
+	echo "Author: " . $row['author'] . "<br />";
+	echo "Title: " .  $row['title'] . "<br />";
+	echo "Category: " . $row['type'] . "<br />";
+	echo "Year: " . $row['year'] . "<br />";
+	echo "ISBN: " . $row['isbn'] . "<br />";
+	echo "<form action='example10-8.php' method='post'>";
+	echo "<input type='hidden' name='delete' value='yes' />";
+	echo "<input type='hidden' name='isbn' value='" . $row['isbn'] . "' />";
+	echo "<input type='submit' value='DELETE RECORD' /></form>";
 }
 
-mysql_close($db_server);
+$conn = null;
 
 function get_post($var)
 {
-	return mysql_real_escape_string($_POST[$var]);
+	return mysql_escape_string($_POST[$var]);
 }
 ?>

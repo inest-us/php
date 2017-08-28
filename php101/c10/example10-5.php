@@ -1,5 +1,5 @@
 <?php
-require_once 'example10-1.php';
+require_once 'login.php';
 
 try {
     $conn = new PDO("mysql:host=$db_hostname;dbname=$db_database", $db_username, $db_password);

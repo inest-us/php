@@ -1,18 +1,26 @@
 <?php
 require_once 'login.php';
-$db_server = mysql_connect($db_hostname, $db_username, $db_password);
-if (!$db_server) die("Unable to connect to MySQL: " . mysql_error());
-mysql_select_db($db_database)
-	or die("Unable to select database: " . mysql_error());
 
-$query = "CREATE TABLE cats (
-			id SMALLINT NOT NULL AUTO_INCREMENT,
-			family VARCHAR(32) NOT NULL,
-			name VARCHAR(32) NOT NULL,
-			age TINYINT NOT NULL,
-			PRIMARY KEY (id)
-		)";
+try {
+	$conn = new PDO("mysql:host=$db_hostname;dbname=$db_database", $db_username, $db_password);
+	// set the PDO error mode to exception
+	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+	$sql = "CREATE TABLE cats (
+				id SMALLINT NOT NULL AUTO_INCREMENT,
+				family VARCHAR(32) NOT NULL,
+				name VARCHAR(32) NOT NULL,
+				age TINYINT NOT NULL,
+				PRIMARY KEY (id)
+			)";
+	
+	$stmt = $conn->prepare($sql);
+	$stmt->execute();
+	echo "table was created.";
+	$conn = null;
+}
+catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
 
-$result = mysql_query($query);
-if (!$result) die ("Database access failed: " . mysql_error());
 ?>
