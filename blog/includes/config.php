@@ -6,10 +6,10 @@ ob_start();
 session_start();
 
 //database credentials
-define('DBHOST','127.0.0.1');
-define('DBUSER','root');
-define('DBPASS','root');
-define('DBNAME','sampledb');
+define('DBHOST','');
+define('DBUSER','');
+define('DBPASS','');
+define('DBNAME','');
 
 $db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
 // set the PDO error mode to exception

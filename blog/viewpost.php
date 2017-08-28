@@ -25,7 +25,7 @@
 
         <h1>Blog</h1>
         <hr />
-        <p><a href="./">Blog Index</a></p>
+        <p><a href="./index.php">Blog Index</a></p>
         <?php
                 echo '<div>';
                     echo '<h1>'.$row['postTitle'].'</h1>';
