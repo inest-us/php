@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>eg3-7a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        .buttons{
+            width: 100px;
+            float: left;
+            text-align: center;
+            margin: 5px;
+            border: 2px solid;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <span class="buttons">Highlight</span>
+    <br/><br/>
+    <p>
+        Styles make the formatting job much easier and more efficient. To give an attractive look
+        to web sites, styles are heavily used. A person must have a good knowledge of HTML and CSS
+        and a bit of JavaScript. 
+    </p>
+    <script>
+        $(document).ready(function() {
+            $('.buttons').mouseover(function(){
+                $('p').css({
+                    'background-color':'cyan',
+                    'font-weight':'bold',
+                    'color':'blue'
+                });
+            });
+
+            $('.buttons').mouseout(function(){
+                $('p').css({
+                    'background-color':'white',
+                    'font-weight':'normal',
+                    'color':'black'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

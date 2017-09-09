@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>eg3-6a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <img src="test.jpg"/>
+    <img src="test2.jpg"/>
+    <img src="test3.jpg"/>
+    <p></p>
+    <script>
+        $(document).ready(function() {
+            $('img').mousedown(function(event) {
+                $('p').text('Mouse is clicked at horizontal coordinate: ' + event.screenX +
+                ' and at vertical coordinate: ' + event.screenY);
+            });
+        });
+    </script>
+</body>
+</html>

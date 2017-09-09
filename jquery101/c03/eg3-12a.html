@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>eg3-12a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        .link {
+            display: block;
+            width: 170px;
+            height: 55px;
+            background-image: url(test.jpg);
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+        .hover {
+            display: block;
+            width: 200px;
+            height: 70px;
+            background-image: url(test2.jpg);
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+        .active {
+            display: block;
+            width: 170px;
+            height: 55px;
+            background-image: url(test3.jpg);
+            background-repeat: no-repeat;
+            background-position: top left;
+        }
+        img {
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <a href="abc.com"><span class="roll"></span></a>
+    <script>
+        $(document).ready(function() {
+            $('.roll').addClass('link');
+
+            $('.roll').hover(
+                function() {
+                    $(this).addClass('hover');
+                },
+                function() {
+                    $(this).removeClass('hover');
+                }
+            );
+
+            $('.roll').click(function(event) {
+                event.preventDefault();
+                $(this).addClass('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>eg2-9a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    Name: <input class="name" type="text" /><br>
+    Age: <input class="age" type="text" />
+    <script>
+        $(document).ready(function() {
+            $('input').focus(function() {
+                console.log('The focus currently is on text field');
+            });
+
+            $('input').blur(function(){
+                console.log('The focus is lost from text field');
+            });
+        });
+    </script>
+</body>
+</html>
