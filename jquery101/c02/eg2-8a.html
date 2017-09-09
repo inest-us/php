@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>eg2-8a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h3>List of students is </h3>
+    <p class="listofstud"></p>
+    <script>
+        $(document).ready(function() {
+            var students = [
+                {
+                    "role": 101,
+                    "name": "Ben",
+                    "emailId":"ben@gmail.com"
+                },
+                {
+                    "role": 102,
+                    "name": "Ian",
+                    "emailId":"ian@gmail.com"
+                },
+                {
+                    "role": 103,
+                    "name": "Caroline",
+                    "emailId":"carol@gmail.com"
+                }
+            ];
+            $.each(students, function(index, value) {
+                $('p.listofstud').append((index + 1) + ". " + value.role + ", " + value.name + ", " + value.emailId + "<br />");
+            });
+        });
+    </script>
+</body>
+</html>

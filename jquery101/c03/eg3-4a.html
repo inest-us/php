@@ -1,0 +1,44 @@
+<html>
+<head>
+    <title>eg3-4a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        .buttons{
+            width: 100px;
+            float: left;
+            text-align: center;
+            margin: 5px;
+            border: 2px solid;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <span class="bold buttons">Bold</span>
+    <span class="italic buttons">Italic</span>
+    <script>
+        $(document).ready(function() {
+            $('.buttons').bind('mousedown', function(e) {
+                console.log(e.type);
+                console.log($(this).text());
+            });
+
+            $('.buttons').mouseup(function(e) {
+                console.log(e.type);
+                console.log($(this).text());
+            });
+
+            $('.buttons').mouseover(function(e){
+                console.log(e.type);
+                console.log($(this).text());
+            });
+
+            $('.buttons').mouseout(function(e){
+                console.log(e.type);
+                console.log($(this).text());
+            });
+        });
+    </script>
+</body>
+</html>
