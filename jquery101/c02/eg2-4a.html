@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>eg2-4a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h3>Original numerical array is </h3>
+    <p class="allmem"></p>
+    <h3> Array in sorted order </h3>
+    <p class="sorted"></p>
+    <script>
+        $(document).ready(function() {
+            var members = [45, 10,3,22,7 ];
+            $('p.allmem').html(members.join("<br />"));
+            /*
+            a is before b if a - b < 0 => ascending order
+            */
+            members = members.sort(function(a,b) {
+                return a-b;
+            });
+            $('p.sorted').html(members.join("<br />"));
+        });
+    </script>
+</body>
+</html>

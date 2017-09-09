@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>eg2-6a</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h3>First array is </h3>
+    <p class="firstarr"></p>
+    <h3> Second array is </h3>
+    <p class="secondarr"></p>
+    <h3> Array after combination </h3>
+    <p class="combinedarr"></p>
+    <script>
+        $(document).ready(function() {
+            var mem1 = [45, 10, 3];
+            var mem2 = [22, 7];
+            $('p.firstarr').html(mem1.join("<br />"));
+            $('p.secondarr').html(mem2.join("<br />"));
+            members = mem1.concat(mem2);
+            $('p.combinedarr').html(members.join("<br />"));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>eg2-3</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h3> Members of my Group are </h3>
+    <ol id="list"></ol>
+    <script>
+        $(document).ready(function() {
+            var memlist = $("#list");
+            var members = [ "John", "Steve", "Ben", "Damon", "Ian" ];
+            
+            //map(array, callback)
+            members=$.map(members, function(n) { 
+                return n.toUpperCase();
+            });
+
+            //each(array, callback)
+            $.each(members,function( index, value ) {
+                memlist.append($( "<li>" + value + "</li>" ));
+            });
+        });
+    </script>
+</body>
+</html>

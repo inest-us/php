@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>eg2-3-grep</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h3> Members of my Group are </h3>
+    <p class="allmem"></p>
+    <h3> Names with more than 4 characters in length are </h3>
+    <p class="selected"></p>
+    <script>
+        $(document).ready(function() {
+            var members = [ "John", "Steve", "Ben", "Damon","Ian" ];
+            $('p.allmem').html(members.join("<br/>"));
+            
+            members = $.grep(members, function(v) { return v.length > 4});
+            $('p.selected').html(members.join("<br/>"));
+        });
+    </script>
+</body>
+</html>
