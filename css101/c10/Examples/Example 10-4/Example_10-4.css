@@ -1,0 +1,47 @@
+body {
+    font: 12px sans-serif;
+}
+p {
+    background: yellow;
+    padding: 3px;
+    clear: left;
+}
+div {
+    height: 81px;
+    width: 81px;
+    margin: 20px;
+    background-image: url('fish.png');
+    background-repeat: no-repeat;
+    float: left;
+    border: 1px solid rgb(128, 128, 128);
+}
+div#length {
+    background-position: 10px 10px;
+}
+div#percentage {
+    background-position: 60% 60%;
+}
+div#keyword {
+    background-position: center center;
+}
+div#length-percentage {
+    background-position: 80% 10px;
+}
+div#percentage-keyword {
+    background-position: center 100%;
+}
+div#length-keyword {
+    background-position: center 10px;
+}
+div#tiled {
+    background-repeat: repeat;
+    background-position: center center;
+}
+div#x-tiled {
+    background-repeat: repeat-x;
+    background-position: center center;
+}
+div#y-tiled {
+    background-repeat: repeat-y;
+    background-position: center center;
+}

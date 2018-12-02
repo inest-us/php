@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>The Gas Giants</title>
+        <link rel='stylesheet' type='text/css' href='solar_system.css' />
+        <script type='text/javascript'>
+            var fixpng = function($img) {};
+        </script>
+<!--[if lt IE 7]>
+    <link rel='stylesheet' type='text/css' href='solar_system.ie.css' />
+    <script type='text/javascript'>
+    // This fixes PNG transparency in IE
+    var fixpng = function($img)
+    {
+        var $html =
+            '<span ' +
+                (($img.id)?        "id='"    + $img.id + "' "        : '') +
+                (($img.className)? "class='" + $img.className + "' " : '') +
+                (($img.title)?     "title='" + $img.title + "' "     : '') +
+                'style="' +
+                    'display: inline-block;' +
+                    'width: ' + $img.width + 'px;' +
+                    'height: ' + $img.height + 'px;' +
+                    "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(" +
+                    "src='" + $img.src + "', sizingMethod='scale'); " +
+                $img.style.cssText + '" ';
+
+        if ($img.getAttribute('mouseoversrc'))
+        {
+            $html += "mouseoversrc='" + $img.getAttribute('mouseoversrc') + "' ";
+        }
+
+        if ($img.getAttribute('mouseoutsrc'))
+        {
+            $html += "mouseoutsrc='" + $img.getAttribute('mouseoutsrc') + "' ";
+        }
+
+        $html += '></span>';
+
+        $img.outerHTML = $html;
+    }
+    </script>
+<![endif]-->
+    </head>
+    <body>
+        <!--
+             Image reuse guidelines:
+             http://www.nasa.gov/multimedia/guidelines/index.html
+        -->
+<div id='solar-system'>
+    <div class='planet jupiter'>
+        <img src='images/jupiter.png'
+             alt='Jupiter'
+             class='planet'
+             onload='fixpng(this);' />
+        <div class='planet-copy'>
+            <h1>Jupiter</h1>
+            <ul>
+                <li><b>Distance from the Sun:</b> 78,412,020 km</li>
+                <li><b>Equatorial Radius:</b> 71,492 km</li>
+                <li><b>Volume:</b> 1,425,500,000,000,000 km<sup>3</sup></li>
+                <li><b>Mass:</b> 1,898,700,000,000,000,000,000,000,000 kg</li>
+                <li>
+<a href='http://solarsystem.jpl.nasa.gov/planets/profile.cfm?Object=Jupiter'>
+    More Facts
+</a>
+                </li>
+            </ul>
+            <img src='images/symbols/jupiter.png'
+                 alt='Mythological Symbol for Jupiter'
+                 onload='fixpng(this);' />
+        </div>
+    </div>
+    <div class='planet saturn'>
+        <img src='images/saturn.png'
+             alt='Saturn'
+             class='planet'
+             onload='fixpng(this);'/>
+        <div class='planet-copy'>
+            <h1>Saturn</h1>
+            <ul>
+                <li><b>Distance from the Sun:</b> 1,426,725,400 km</li>
+                <li><b>Equatorial Radius:</b> 60,268 km</li>
+                <li><b>Volume:</b> 827,130,000,000,000 km<sup>3</sup></li>
+                <li><b>Mass:</b> 568,510,000,000,000,000,000,000,000 kg</li>
+                <li>
+<a href='http://solarsystem.jpl.nasa.gov/planets/profile.cfm?Object=Saturn'>
+    More Facts
+</a>
+                </li>
+            </ul>
+            <img src='images/symbols/saturn.png'
+                 alt='Mythological Symbol for Saturn'
+                 onload='fixpng(this);' />
+        </div>
+    </div>
+    <div class='planet uranus'>
+        <img src='images/uranus.png'
+             alt='Uranus'
+             class='planet'
+             onload='fixpng(this);' />
+        <div class='planet-copy'>
+            <h1>Uranus</h1>
+            <ul>
+                <li><b>Distance from the Sun:</b> 2,870,972,200 km</li>
+                <li><b>Equatorial Radius:</b> 25,559 km</li>
+                <li><b>Volume:</b> 69,142,000,000,000 km<sup>3</sup></li>
+                <li><b>Mass:</b> 86,849,000,000,000,000,000,000,000 kg</li>
+                <li>
+<a href='http://solarsystem.jpl.nasa.gov/planets/profile.cfm?Object=Uranus'>
+    More Facts
+</a>
+                </li>
+            </ul>
+            <img src='images/symbols/uranus.png'
+                 alt='Mythological Symbol for Uranus'
+                 onload='fixpng(this);' />
+        </div>
+    </div>
+    <div class='planet neptune'>
+        <img src='images/neptune.png'
+             alt='Neptune'
+             class='planet'
+             onload='fixpng(this);' />
+        <div class='planet-copy'>
+            <h1>Neptune</h1>
+            <ul>
+                <li><b>Distance from the Sun:</b> 4,498,252,900 km</li>
+                <li><b>Equatorial Radius:</b> 24,764 km</li>
+                <li><b>Volume:</b> 62,526,000,000,000 km<sup>3</sup></li>
+                <li><b>Mass:</b> 102,440,000,000,000,000,000,000,000 kg</li>
+                <li>
+<a href='http://solarsystem.jpl.nasa.gov/planets/profile.cfm?Object=Neptune'>
+    More Facts
+</a>
+                </li>
+            </ul>
+            <img src='images/symbols/neptune.png'
+                 alt='Mythological Symbol for Neptune'
+                 onload='fixpng(this);'/>
+        </div>
+    </div>
+</div>
+    </body>
+</html>

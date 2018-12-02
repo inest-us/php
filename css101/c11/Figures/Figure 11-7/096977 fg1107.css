@@ -1,0 +1,22 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+    margin: 50px;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 0;
+}
+p {
+    background: pink;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 5px;
+}
+p#margin {
+    margin: 25px 0 0 25px;
+}
+p#relative {
+    background: lightblue;
+    position: relative;
+    top: 25px;
+    left: 25px;
+    margin: 0;
+}

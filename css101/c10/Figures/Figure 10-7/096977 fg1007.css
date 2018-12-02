@@ -1,0 +1,21 @@
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 10px;
+    float: left;
+    background-image: url('cat.png');
+    background-repeat: no-repeat;
+    font: 12px sans-serif;
+}
+div#length        {background-position: 10px 10px;    }
+div#percentage    {background-position: 10% 10%;      }
+div#top-left      {background-position: top left;     }
+div#top-center    {background-position: top center;   }
+div#top-right     {background-position: top right;    }
+div#right-center  {background-position: right center; }
+div#bottom-right  {background-position: bottom right; }
+div#bottom-center {background-position: bottom center;}
+div#bottom-left   {background-position: bottom left;  }
+div#left-center   {background-position: left center;  }
+div#center-center {background-position: center center }

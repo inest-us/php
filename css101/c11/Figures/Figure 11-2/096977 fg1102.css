@@ -1,0 +1,39 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+}
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(200, 200, 200);
+    /* Moz proprietary opacity property */
+    -moz-opacity: 0.7;
+    /* Microsoft proprietary filter property */
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    /* CSS 3 opacity property */
+    opacity: 0.7;
+}
+div#one {
+    background: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div#two {
+    background: lightblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+div#three {
+    background: yellowgreen;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+div#four {
+    background: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

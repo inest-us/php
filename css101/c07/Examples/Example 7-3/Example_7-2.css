@@ -1,0 +1,45 @@
+body {
+    font: 12px sans-serif;
+}
+div#border-style-properties {
+    border-top-style: solid;
+    border-right-style: dashed;
+    border-bottom-style: double;
+    border-left-style: inset;
+}
+div#border-style {
+    border-style: solid dashed double inset;
+}
+div#color-default {
+    color: crimson;
+    border-style: solid dotted;
+}
+div#border-width {
+    overflow: hidden;
+}
+div#border-width div {
+    float: left;
+    border-style: solid;
+    border-color: red;
+    margin: 0 5px;
+}
+div#thin {
+    border-width: thin;
+}
+div#medium {
+    border-width: medium;
+}
+div#thick {
+    border-width: thick;
+}
+div#shorthand-sides {
+    border-top: 1px solid pink;
+    border-right: 1px solid crimson;
+    border-bottom: 1px solid pink;
+    border-left: 1px solid crimson;
+    padding: 5px;
+}
+div#shorthand {
+    border: 1px solid crimson;
+    padding: 5px;
+}

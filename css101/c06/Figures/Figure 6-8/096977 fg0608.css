@@ -1,0 +1,17 @@
+body {
+    font-size: 24px;
+    text-align: center;
+}
+p {
+    margin: 0;
+}
+p#uppercase {
+    margin-top: 15px;
+    text-transform: uppercase;
+    color: crimson;
+}
+p#small-caps {
+    font-variant: small-caps;
+    margin-bottom: 15px;
+    color: crimson;
+}

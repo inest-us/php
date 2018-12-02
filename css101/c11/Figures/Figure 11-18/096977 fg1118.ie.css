@@ -1,0 +1,8 @@
+h1 {
+    width: expression(documentElement.offsetWidth);
+}
+div#container {
+    top: 32px;
+    width: expression(documentElement.offsetWidth - 21);
+    height: expression(documentElement.offsetHeight - 35);
+}

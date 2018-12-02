@@ -1,0 +1,20 @@
+body {
+    font: 14px sans-serif;
+}
+p {
+    padding: 5px 25px;
+    background: mistyrose;
+    border: 1px solid orange;
+}
+span.lower {
+    text-transform: lowercase;
+}
+span.upper {
+    text-transform: uppercase;
+}
+span.capitalize {
+    text-transform: capitalize;
+}
+span.example {
+    background: pink;
+}

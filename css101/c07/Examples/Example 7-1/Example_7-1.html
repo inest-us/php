@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>margin</title>
+        <link rel='stylesheet' type='text/css' href='Example_7-1.css' />
+    </head>
+    <body>
+        <p>
+            The margin shorthand property can accept from one to four values.
+            When all four values are provided, each is provided in order clockwise,
+            beginning with the top property.  Box model properties are
+            always specified in order clockwise.
+        </p>
+        <div class='margin-wrapper'>
+            <div id='margin'></div>
+        </div>
+        <p>
+            You can also specify margin via one of the four separate margin
+            properties: margin-top, margin-right, margin-bottom, and margin-left.
+        </p>
+        <div class='margin-wrapper'>
+            <div id='margin-properties'></div>
+        </div>
+        <p>
+            When three values are supplied to the margin shorthand property,
+            the top is the first value, the right and left sides are the second
+            value, and the bottom is the third value.
+        </p>
+        <div class='margin-wrapper'>
+            <div id='margin-three'></div>
+        </div>
+        <p>
+            When two values are supplied to the margin shorthand property,
+            the top and bottom are the first value, right and left sides are the
+            second value.
+        </p>
+        <div class='margin-wrapper'>
+            <div id='margin-two'></div>
+        </div>
+        <p>
+            When one value is supplied to the margin shorthand property, all four
+            sides are specified with that one value.
+        </p>
+        <div class='margin-wrapper'>
+            <div id='margin-one'></div>
+        </div>
+        <p>
+            If the auto keyword is supplied for the left or right margins, the
+            element that margin is applied to is aligned horizontally.
+        </p>
+        <div class='margin-wrapper alignment'>
+            <div id='margin-left'></div>
+            <div id='margin-center'></div>
+            <div id='margin-right'></div>
+        </div>
+        <p>
+            Margin collapsing happens when the top or bottom margin of one element
+            comes into contact with the top or bottom margin of another element.
+            The smaller of the two margins is eliminated; if they are equal size,
+            then one margin is still eliminated.  This happens with adjacent
+            siblings.
+        </p>
+        <div class='margin-wrapper'>
+            <div id='top'></div>
+            <div id='bottom'></div>
+        </div>
+        <p>
+            Margin collapsing also happens between parent and child elements.
+        </p>
+        <div class='margin-wrapper'>
+            <div id='parent'>
+                <div id='child'></div>
+            </div>
+        </div>
+    </body>
+</html>

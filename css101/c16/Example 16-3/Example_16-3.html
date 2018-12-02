@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>Direct Child Selectors</title>
+        <link rel='stylesheet' type='text/css' href='Example_16-3.css' />
+        <!-- compliance patch for microsoft browsers -->
+        <!--[if lt IE 7]>
+            <script src='/ie7/ie7-standard-p.js' type='text/javascript'></script>
+        <![endif]-->
+    </head>
+    <body>
+        <h1><ins>Direct Child</ins> <del>Descendant</del> Selectors</h1>
+        <p>
+            <ins>Direct Child</ins> <del>Descendant</del> selectors apply styles
+            based on <ins>parent/child</ins> <del>ancestral</del> relationships.
+            The first <ins>direct child</ins> <del>descendant</del> example I
+            present applies style to the
+            <span class='code'>&lt;span&gt;</span> element named <em>code</em>,
+            which is a <del>descendant</del> <ins>child</ins> of
+            <span class='code'>&lt;p&gt;</span> elements.
+            To do this, the selector <span class='code'>p <ins>&gt;</ins>
+            span.code</span> is used.
+        </p>
+        <p>
+            Using CSS, styles can be applied to any number of documents.  Since
+            this is the case, there may be <span class='code'>&lt;span&gt;</span>
+            elements with a class name of <em>code</em> in several documents, but
+            have different styles applied depending on the context it appears,
+            which is the exact situation the inventors of the <del>descendant</del>
+            <ins>child</ins> selector had in mind when it was conceived.
+        </p>
+        <p class='note'>
+            The note text is given different styles.  To do this another
+            <del>descendant</del> <ins>direct child</ins>
+            selector is used, this time the selector is
+            <span class='code'>p.note <ins>&gt;</ins> span.code</span>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+div {
+    float: left;
+    background: lightyellow;
+    border: 1px solid gold;
+    margin: 2px;
+    padding: 3px;
+}
+h4 {
+    font-weight: normal;
+    margin: 2px 0;
+}
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ol#decimal {
+    list-style-type: decimal;
+}
+ol#decimal-leading-zero {
+    list-style-type: decimal-leading-zero;
+}
+ol#lower-roman {
+    list-style-type: lower-roman;
+}
+ol#upper-roman {
+    list-style-type: upper-roman;
+}
+ol#lower-greek {
+    list-style-type: lower-greek;
+}
+ol#lower-latin {
+    list-style-type: lower-latin;
+}
+ol#upper-latin {
+    list-style-type: upper-latin;
+}
+ol#armenian {
+    list-style-type: armenian;
+}
+ol#georgian {
+    list-style-type: georgian;
+}
+ol#lower-alpha {
+    list-style-type: lower-alpha;
+}
+ol#upper-alpha {
+    list-style-type: upper-alpha;
+}

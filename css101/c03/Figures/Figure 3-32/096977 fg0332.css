@@ -1,0 +1,9 @@
+* {
+    font: 14px sans-serif;
+}
+a[href$=".html"] {
+    background: url('firefox.png') no-repeat left center;
+    padding-left: 20px;
+    color: blue;
+    text-decoration: none;
+}

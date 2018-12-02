@@ -1,0 +1,24 @@
+body {
+    font: 14px sans-serif;
+}
+h1 {
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+}
+li {
+    margin: 5px 0;
+}
+a:link {
+    color: steelblue;
+}
+a:visited {
+    color: darkorchid;
+}
+a:hover {
+    color: orange;
+}
+a:active {
+    color: crimson;
+}

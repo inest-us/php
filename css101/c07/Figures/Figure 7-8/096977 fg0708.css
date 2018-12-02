@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background: mistyrose;
+    border: 1px solid pink;
+}
+div#topbottom-rightleft {
+    margin-top: 15px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+div#topbottom-rightleft-1 {
+    margin: 15px 5px;
+}

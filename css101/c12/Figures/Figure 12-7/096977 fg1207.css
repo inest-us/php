@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+}
+table {
+    border: 1px solid rgb(200, 200, 200);
+    caption-side: bottom;
+    width: 200px;
+    table-layout: fixed;
+}
+th {
+    background: lightyellow;
+}
+th, td {
+    border: 1px solid rgb(200, 200, 200);
+    padding: 5px;
+    overflow: hidden;
+}
+col#album {
+    width: 200px;
+    background: rgb(244, 244, 244);
+    color: crimson;
+}
+col#released {
+    width: 1%;
+    background: rgb(244, 244, 244);
+}
+div#control {
+    width: 200px;
+    background: crimson;
+    color: white;
+    text-align: center;
+    font-family: monospace;
+    margin-bottom: 5px;
+    padding: 3px 0;
+}

@@ -1,0 +1,17 @@
+p {
+    font: 16px sans-serif;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+@media print {
+    p {
+        font: 12pt sans-serif;
+        border: 1pt solid black;
+        padding: 0.05in;
+        margin: 0.05in;
+    }
+    p#before {
+        page-break-before: always;
+    }
+}

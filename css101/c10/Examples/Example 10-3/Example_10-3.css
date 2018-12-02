@@ -1,0 +1,21 @@
+p {
+    background: lightyellow;
+    padding: 3px;
+}
+div {
+    height: 81px;
+    margin: 10px 0;
+    background-image: url('note.png');
+}
+div#repeat {
+    background-repeat: repeat;
+}
+div#repeat-x {
+    background-repeat: repeat-x;
+}
+div#repeat-y {
+    background-repeat: repeat-y;
+}
+div#no-repeat {
+    background-repeat: no-repeat;
+}

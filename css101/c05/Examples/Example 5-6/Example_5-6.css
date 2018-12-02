@@ -1,0 +1,16 @@
+body {
+    font: 14px sans-serif;
+}
+p {
+    padding: 5px;
+}
+p#pre {
+    white-space: pre;
+}
+p#nowrap {
+    white-space: nowrap;
+}
+p.example {
+    background: lightyellow;
+    border: 1px solid darkkhaki;
+}

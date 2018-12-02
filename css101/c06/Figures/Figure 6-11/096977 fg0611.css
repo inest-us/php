@@ -1,0 +1,18 @@
+body {
+    font-size: medium;
+}
+p#larger {
+    font-size: larger;
+}
+p#larger span {
+    font-size: 20px;
+}
+p#smaller {
+    font-size: smaller;
+}
+p#smaller span {
+    font-size: 12px;
+}
+span {
+    background: mistyrose;
+}

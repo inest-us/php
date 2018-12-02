@@ -1,0 +1,7 @@
+p {
+    font: 12px sans-serif;
+    border: 1px solid steelblue;
+    background: lightsteelblue;
+    padding: 5px;
+    min-width: 500px;
+}

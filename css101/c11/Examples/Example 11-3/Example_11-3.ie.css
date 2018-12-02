@@ -1,0 +1,14 @@
+body {
+    background: lightyellow url('http://') fixed;
+}
+div#fixed-top {
+    position: absolute;
+    top: expression(eval(documentElement.scrollTop) + 5);
+}
+div#fixed-bottom {
+    position: absolute;
+    bottom: auto;
+    top: expression(
+        (documentElement.scrollTop + documentElement.clientHeight - this.clientHeight) - 7
+    );
+}

@@ -1,0 +1,33 @@
+body {
+    font: 12px sans-serif;
+}
+div {
+    background: yellow;
+    border: 1px solid black;
+    margin: 0 20px;
+}
+div#relative {
+    position: relative;
+    height: 200px;
+}
+p {
+    padding: 5px;
+}
+p#bottom-right {
+    margin: 0;
+    background: gold;
+    border: 1px solid crimson;
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+p#offset {
+    margin: 0;
+    background: pink;
+    border: 1px solid crimson;
+    position: relative;
+    top: 10px;
+    left: 10px;
+}

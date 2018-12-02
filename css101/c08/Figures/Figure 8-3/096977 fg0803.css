@@ -1,0 +1,13 @@
+img {
+    margin: 10px;
+    border: 1px solid rgb(128, 128, 128);
+}
+img#starfish {
+    float: left;
+}
+img#lake {
+    float: right;
+}
+p {
+    font: 12px sans-serif;
+}

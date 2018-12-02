@@ -1,0 +1,9 @@
+* {
+    font: 14px sans-serif;
+}
+a[href^="mailto:"] {
+    background: url('envelope.png') no-repeat left center;
+    padding-left: 25px;
+    color: royalblue;
+    text-decoration: none;
+}

@@ -1,0 +1,17 @@
+
+
+    h1,
+    div#footer {
+        width: expression(documentElement.offsetWidth);
+    }
+    div#left,
+    div#right {
+        top: 32px;
+        height: expression(documentElement.offsetHeight - 65);
+    }
+    div#container {
+        top: 32px;
+        left: 211px;
+        width: expression(documentElement.offsetWidth - 446);
+        height: expression(documentElement.offsetHeight - 65);
+    }

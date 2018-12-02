@@ -1,0 +1,12 @@
+body {
+    font: 16px sans-serif;
+}
+p {
+    white-space: pre;
+}
+span.quote {
+    color: purple;
+}
+span.author {
+    font-size: 12px;
+}

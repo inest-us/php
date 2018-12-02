@@ -1,0 +1,24 @@
+li {
+    background: mistyrose;
+}
+li#arrow {
+    list-style: square url('arrow.png') outside;
+}
+li#arrow-inside {
+    list-style: url('arrow.png') inside;
+}
+li#marker-inside {
+    list-style: square inside;
+}
+li#marker-image {
+    list-style: square url('arrow.png');
+}
+li#arrow-only {
+    list-style: url('arrow.png');
+}
+li#marker {
+    list-style: circle;
+}
+li#position {
+    list-style: inside;
+}

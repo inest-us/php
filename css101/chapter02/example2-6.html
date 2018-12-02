@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <title>Em Measurement Comparison to Pixels</title>
+    <style type='text/css'>
+        body {
+            /* font-size is set to 16px (default in all modern browsers)*/
+            font: 1em sans-serif;
+        }
+        p {
+            background: rgb(234, 234, 234);
+            border: 1px solid rgb(200, 200, 200);
+        }
+        p#em-measurement {
+            width: 12em; /* 192px, 12 * 16 */
+            padding: 1em;
+        }
+        p#px-measurement {
+            width: 192px;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p id='em-measurement'>
+        This paragraph is 12 em wide, with a 1em padding.
+    </p>
+    <p id='px-measurement'>
+        This paragraph is 192 pixels wide, with 16 pixels of
+        padding.
+    </p>
+</body>
+</html>

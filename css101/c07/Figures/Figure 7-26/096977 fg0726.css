@@ -1,0 +1,19 @@
+div {
+    padding: 3px;
+    border-color: crimson;
+    border-width: 3px;
+    margin: 5px;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+div#hidden {border-style: hidden;}
+div#dotted {border-style: dotted;}
+div#dashed {border-style: dashed;}
+div#solid  {border-style: solid; }
+div#double {border-style: double;}
+div#groove {border-style: groove;}
+div#ridge  {border-style: ridge; }
+div#inset  {border-style: inset; }
+div#outset {border-style: outset;}
+div#none   {border-style: none;  }

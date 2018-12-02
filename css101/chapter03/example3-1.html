@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+<head>
+    <title>Class and ID Selectors</title>
+    <link rel='stylesheet' type='text/css' href='css/example3-1.css' />
+</head>
+<body>
+    <p class='container'>
+        A class represents something that you can have more than one of.
+        You aptly name your class to reflect the type of item that you
+        may or may not have more than one of.  The class name for this
+        paragraph is <i>container</i>.  It could very well be that you
+        have many containers, or just one.
+    </p>
+    <p class='container box'>
+        You can chain together class names within the class attribute.
+        From a purely semantic standpoint, the class names may or may
+        not have a relationship with each other.  Here, the class names
+        are <i>container</i> and <i>box</i>.  It could be said that boxes
+        and containers are related, since <i>box</i> is a type of
+        <i>container</i>.
+    </p>
+    <p class='container tank'>
+        It is wise to put thought behind the naming conventions you use
+        within a document.  Here, <i>tank</i> is another type of
+        <i>container</i>.  All containers have some properties in common.
+        Dimensions, color, volume, etc.  But some containers may have
+        properties that are unique to that container. Perhaps it has a
+        different color, or capacity, or is intended to hold a different
+        kind of material.
+    </p>
+    <p class='container' id='container-1234'>
+        An id is used but once per document.  Semantically speaking, the
+        id should be able to identify uniquely, and be descriptive.
+        You may have several containers, but only one container has the id
+        <i>1234</i>.  Since only one container is named <i>1234</i>, it
+        becomes easier to find that container among the others.
+    </p>
+</body>
+</html>

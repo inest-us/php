@@ -1,0 +1,7 @@
+body {
+    background: lightyellow url('http://') fixed;
+}
+div {
+    position: absolute;
+    top: expression(eval(documentElement.scrollTop));
+}

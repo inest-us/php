@@ -1,0 +1,20 @@
+body {
+    font: 14px sans-serif;
+    line-height: 30px;
+}
+span {
+    background: mistyrose;
+    border: 1px solid pink;
+}
+span.font1 {
+    font-family: "Perpetua Titling MT", serif;
+}
+span.font2 {
+    font-family: "Baskerville Old Face", serif;
+}
+span.font3 {
+    font-family: "Lucida Bright", monospace;
+}
+span.font4 {
+    font-family: Herculanum, "Eras Demi ITC", sans-serif;
+}

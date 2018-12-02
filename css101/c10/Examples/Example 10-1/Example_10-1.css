@@ -1,0 +1,25 @@
+body {
+    background-color: pink;
+    line-height: 32px;
+}
+span {
+    border: 1px solid rgb(0, 0, 0);
+}
+span#keyword {
+    background-color: yellow;
+}
+span#rgb {
+    background-color: rgb(200, 0, 0);
+    color: #fff;
+}
+span#hexadecimal {
+    background-color: #000000;
+    color: #ffffff;
+}
+span#short-hex {
+    background-color: #fff;
+    color: #000;
+}
+span#transparent {
+    background-color: transparent;
+}

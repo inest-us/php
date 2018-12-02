@@ -1,0 +1,37 @@
+body {
+    background: yellowgreen;
+}
+p {
+    margin: 10px 110px;
+}
+div {
+    position: absolute;
+    background: yellow;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+}
+div#top-left {
+    top: 0;
+    left: 0;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+div#top-right {
+    top: 0;
+    right: 0;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+div#bottom-left {
+    bottom: 0;
+    left: 0;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+div#bottom-right {
+    bottom: 0;
+    right: 0;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}

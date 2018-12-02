@@ -1,0 +1,9 @@
+p {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid gold;
+    background: yellow;
+    font: 12px sans-serif
+}

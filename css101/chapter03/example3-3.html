@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+<head>
+    <title>Descendant Selectors</title>
+    <link rel='stylesheet' type='text/css' href='css/example3-3.css' />
+</head>
+<body>
+    <h1>Descendant Selectors</h1>
+    <p>
+        Descendant selectors apply styles based on ancestral relationships.
+        The first descendant example I present applies style to the
+        <span class='code'>&lt;span&gt;</span> element named <em>code</em>,
+        which is a descendant of <span class='code'>&lt;p&gt;</span> elements.
+        To do this, the selector <span class='code'>p span.code</span> is used.
+    </p>
+    <p>
+        Using CSS, styles can be applied to any number of documents.  Since
+        this is the case, there may be <span class='code'>&lt;span&gt;</span>
+        elements with a class name of <em>code</em> in several documents, but
+        have different styles applied depending on the context it appears,
+        which is the exact situation the inventors of the descendant
+        selector had in mind when it was conceived.
+    </p>
+    <p class='note'>
+        The note text is given different styles.  To do this another descendant
+        selector is used.  This time the selector is <span class='code'>p.note
+        span.code</span>
+    </p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+    margin: 0;
+    padding: 0 20px;
+}
+div#heading,
+div#container,
+div#footer {
+    border: 1px solid black;
+    max-width: 1000px;
+    min-width: 600px;
+    background: rgb(244, 244, 244);
+}
+div#container {
+    position: relative;
+    margin: 0 auto;
+}
+div#heading {
+    margin: 10px auto -1px auto;
+}
+div#heading h1 {
+    margin: 5px;
+}
+div#left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    background: rgb(234, 234, 234);
+    padding: 5px;
+    border-right: 1px solid black;
+}
+div#content {
+    margin-left: 211px;
+    background: white;
+    border: 1px solid white;
+    padding: 10px;
+}
+div#footer {
+    margin: -1px auto 10px auto;
+}
+div#footer p {
+    margin: 5px;
+}

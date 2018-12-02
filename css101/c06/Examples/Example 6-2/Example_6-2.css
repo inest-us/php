@@ -1,0 +1,18 @@
+body {
+    font: 14px sans-serif;
+    line-height: 30px;
+}
+span {
+    background: yellow;
+    border: 1px solid gold;
+}
+span.oblique {
+    font-style: oblique;
+}
+span.italic {
+    font-style: italic;
+}
+p.naught {
+    font-family: "Monotype Corsiva";
+    font-style: italic;
+}

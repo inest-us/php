@@ -1,0 +1,23 @@
+body {
+    background: lightyellow;
+    font: 16px sans-serif;
+}
+div#dialogue {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: yellow;
+    border: 1px solid gold;
+    top: 50%;
+    left: 50%;
+    margin: -56px 0 0 -106px;
+    padding: 5px;
+}
+p {
+    margin: 0;
+}
+p.copy {
+    margin: 10px;
+    line-height: 2em;
+    font-size: 12px;
+}

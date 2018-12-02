@@ -1,0 +1,17 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+    margin: 0;
+    padding: 0;
+}
+p {
+    background: pink;
+    border: 1px solid red;
+    padding: 5px;
+    margin: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}

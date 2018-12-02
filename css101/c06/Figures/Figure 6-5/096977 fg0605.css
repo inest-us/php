@@ -1,0 +1,12 @@
+body {
+    font-size: 24px;
+}
+p {
+    margin: 0;
+}
+p#italic {
+    font-style: italic;
+}
+p#oblique {
+    font-style: oblique;
+}

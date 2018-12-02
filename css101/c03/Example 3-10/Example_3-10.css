@@ -1,0 +1,23 @@
+body {
+    font-size: 12px sans-serif;
+}
+table {
+    background: slateblue;
+    color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid mediumslateblue;
+}
+td {
+    border: 1px solid darkslateblue;
+    padding: 2px;
+}
+th {
+    background: lightsteelblue;
+    color: darkslateblue;
+    font-size: 18px;
+    text-align: left;
+}
+table tbody tr:first-child td {
+    background: mediumslateblue;
+}

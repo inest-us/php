@@ -1,0 +1,10 @@
+body {
+    color: royalblue;
+    font-size: 24px;
+}
+p#times-new-roman {
+    font-family: "Times New Roman";
+}
+p#arial {
+    font-family: Arial;
+}

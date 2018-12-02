@@ -1,0 +1,10 @@
+p {
+    font: 16px sans-serif;
+    margin: 25px 0;
+}
+span#sub {
+    vertical-align: sub;
+}
+span#super {
+    vertical-align: super;
+}

@@ -1,0 +1,12 @@
+body {
+    font: 16px sans-serif;
+}
+p.font1 {
+    font: bold 24px sans-serif;
+}
+p.font2 {
+    font: italic bold small-caps 24px sans-serif;
+}
+p.font3 {
+    font: 16px monospace;
+}

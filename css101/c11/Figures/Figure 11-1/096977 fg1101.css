@@ -1,0 +1,21 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+}
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(200, 200, 200);
+}
+div#one {
+    background: pink;
+}
+div#two {
+    background: lightblue;
+}
+div#three {
+    background: yellowgreen;
+}
+div#four {
+    background: orange;
+}

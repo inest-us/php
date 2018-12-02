@@ -1,0 +1,56 @@
+p {
+    font: 12px sans-serif;
+}
+span.line {
+    border: 1px solid rgb(200, 200, 200);
+    background: rgb(244, 244, 244);
+    font-size: 100px;
+}
+span.line span {
+    vertical-align: 300%;
+    font-size: 20px;
+    background: white;
+    border: 1px solid black;
+}
+span#top {
+    vertical-align: top;
+}
+span#middle {
+    vertical-align: middle;
+}
+span#bottom {
+    vertical-align: bottom;
+}
+span#text-top {
+    vertical-align: text-top;
+}
+span#text-bottom {
+    vertical-align: text-bottom;
+}
+span#percentage {
+    vertical-align: 200%;
+}
+span#length {
+    vertical-align: 46px;
+}
+td {
+    padding: 5px;
+    width: 100px;
+    border: 1px solid black;
+}
+td#baseline-copy {
+    vertical-align: baseline;
+}
+td#baseline {
+    font-size: 50px;
+    vertical-align: baseline;
+}
+td#td-top {
+    vertical-align: top;
+}
+td#td-middle {
+    vertical-align: middle;
+}
+td#td-bottom {
+    vertical-align: bottom;
+}

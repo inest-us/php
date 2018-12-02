@@ -1,0 +1,22 @@
+td {
+    font: 12px sans-serif;
+    border: 1px solid black;
+    padding: 5px;
+    width: 100px;
+}
+td#baseline {
+    font-size: 50px;
+    vertical-align: baseline;
+}
+td#baseline-copy {
+    vertical-align: baseline;
+}
+td#top {
+    vertical-align: top;
+}
+td#middle {
+    vertical-align: middle;
+}
+td#bottom {
+    vertical-align: bottom;
+}

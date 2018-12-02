@@ -1,0 +1,25 @@
+body {
+    background-color: yellow;
+}
+div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 5px;
+    float: left;
+}
+div#one {
+    background-color: pink;
+}
+div#two {
+    background-color: rgb(200, 0, 0);
+}
+div#three {
+    background-color: #ffffff;
+}
+div#four {
+    background-color: #000;
+}
+div#five {
+    background-color: transparent;
+}

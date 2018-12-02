@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background: lightyellow;
+    border: 1px solid gold;
+}
+div#top {
+    margin: 10px 20px;
+}
+div#bottom {
+    margin: 20px;
+}

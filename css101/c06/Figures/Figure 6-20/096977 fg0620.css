@@ -1,0 +1,18 @@
+p#caption {
+    font: caption;
+}
+p#icon {
+    font: icon;
+}
+p#menu {
+    font: menu;
+}
+p#message-box {
+    font: message-box;
+}
+p#small-caption {
+    font: small-caption;
+}
+p#status-bar {
+    font: status-bar;
+}

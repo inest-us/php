@@ -1,0 +1,12 @@
+div#container {
+    width: expression(
+        documentElement.clientWidth >= 1000?
+            1000
+        :
+            (documentElement.clientWidth <= 600? 600 : 'auto')
+    );
+}
+div#left {
+    top: 1px;
+    height: expression(document.getElementById('container').offsetHeight - 12);
+}

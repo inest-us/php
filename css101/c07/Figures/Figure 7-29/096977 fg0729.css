@@ -1,0 +1,24 @@
+div {
+    float: left;
+    background: gold;
+    margin: 5px;
+    width: 250px;
+}
+div div {
+    float: none;
+    background: white;
+    border: none;
+    font: 10px sans-serif;
+    color: rgb(200, 200, 200);
+    width: auto;
+}
+div#properties {
+    padding-top: 2px;
+    padding-right: 4px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+}
+div#four-values {   padding: 2px 4px 6px 8px; }
+div#three-values {  padding: 2px 8px 6px;     }
+div#two-values {    padding: 2px 8px;         }
+div#one-value {     padding: 2px;             }

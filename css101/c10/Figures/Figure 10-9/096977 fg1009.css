@@ -1,0 +1,41 @@
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 4px;
+    float: left;
+    background-image: url('star.png');
+}
+div#repeat {
+    background-position: 10px 10px;
+    background-repeat: repeat;
+}
+div#repeat-single {
+    background-position: 10px;
+    background-repeat: repeat;
+}
+div#repeat-x-control {
+    background-repeat: repeat-x;
+}
+div#repeat-x {
+    background-position: 10px 10px;
+    background-repeat: repeat-x;
+}
+div#repeat-x-single {
+    background-position: 10px;
+    background-repeat: repeat-x;
+}
+div#repeat-y-control {
+    background-repeat: repeat-y;
+}
+div#repeat-y {
+    background-position: 10px 10px;
+    background-repeat: repeat-y;
+}
+div#repeat-y-single {
+    background-position: 10px;
+    background-repeat: repeat-y;
+}
+br {
+    clear: both;
+}

@@ -1,0 +1,15 @@
+* {
+    font-size: 12px;
+}
+
+fieldset {
+    border: 1px solid royalblue;
+}
+legend, label {
+    color: royalblue;
+}
+input[type='text'] {
+    background: blue;
+    color: white;
+    border: 3px solid royalblue;
+}

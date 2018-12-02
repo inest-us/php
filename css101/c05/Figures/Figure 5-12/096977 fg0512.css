@@ -1,0 +1,22 @@
+body {
+    font: 12px sans-serif;
+}
+h1 {
+    font: 14px sans-serif;
+    margin: 0;
+    color: darkslateblue;
+    border-bottom: 1px solid steelblue;
+}
+p {
+    color: darkslateblue;
+    padding: 10px;
+}
+p#left {
+    text-align: left;
+}
+p#center {
+    text-align: center;
+}
+p#right {
+    text-align: right;
+}

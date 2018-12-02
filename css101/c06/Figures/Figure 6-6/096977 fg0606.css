@@ -1,0 +1,13 @@
+body {
+    font-size: 24px;
+}
+p {
+    margin: 0;
+    font-family: "Monotype Corsiva";
+}
+p#italic {
+    font-style: italic;
+}
+p#oblique {
+    font-style: oblique;
+}

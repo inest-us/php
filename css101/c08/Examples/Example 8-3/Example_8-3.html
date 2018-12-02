@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>vertical-align</title>
+        <link rel='stylesheet' type='text/css' href='Example_8-3.css' />
+    </head>
+    <body>
+        <p>
+            The vertical-align property is used in two scenarios: to
+            vertically align inline elements with respect to the line
+            box, and to vertically align the contents of table cells.
+        </p>
+        <p>
+            When vertically aligning inline elements within a line box,
+            the vertical-align property can be used with the keywords
+            top, middle, bottom, text-top, text-bottom.
+        </p>
+        <p>
+            <span class='line'>
+                Gg
+                <span id='top'>Top</span>
+                <span id='middle'>Middle</span>
+                <span id='bottom'>Bottom</span>
+                <span id='text-top'>Text Top</span>
+                <span id='text-bottom'>Text Bottom</span>
+            </span>
+        </p>
+        <p>
+            The top and bottom keywords align to the top and bottom of
+            the line-box respectively.  The middle keyword aligns to the
+            center point of the highest lowercase letter.  The text-top
+            and text-bottom keyword align to the tallest and lowest character,
+            respectively.
+        </p>
+        <p>
+            The vertical-align property can also accept either a
+            percentage or length value.  The percentage value is a
+            percentage of the line-height value; the length is offset
+            from the bottom of the line-height.
+        </p>
+        <p>
+            <span class='line'>
+                Gg
+                <span id='percentage'>200%</span>
+                <span id='length'>46px</span>
+            </span>
+        </p>
+        <p>
+            Finally, when applied to table cells, the baseline, top, middle,
+            and bottom keywords have different meanings.
+        </p>
+        <table>
+            <tbody>
+                <tr>
+                    <td id='baseline-copy'>
+                        This copy aligns with the bottom of the tallest content
+                        in the first row of the table.
+                    </td>
+                    <td id='baseline'>Baseline</td>
+                    <td id='td-top'>Top</td>
+                    <td id='td-middle'>Middle</td>
+                    <td id='td-bottom'>Bottom</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

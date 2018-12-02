@@ -1,0 +1,16 @@
+body {
+    font: 12px sans-serif;
+}
+.underover, .overthrough, .underoverthrough {
+    color: darkred;
+    background: mistyrose;
+}
+.underover {
+    text-decoration: underline overline;
+}
+.overthrough {
+    text-decoration: overline line-through;
+}
+.underoverthrough {
+    text-decoration: underline overline line-through;
+}

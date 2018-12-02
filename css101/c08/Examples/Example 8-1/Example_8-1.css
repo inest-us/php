@@ -1,0 +1,26 @@
+p.block {
+    float: left;
+    margin: 5px;
+    background: lightyellow;
+    border: 1px solid khaki;
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+}
+span#inline {
+    float: left;
+    background: khaki;
+    border: 1px solid gold;
+    padding: 5px;
+    margin: 5px;
+}
+img {
+    border: 1px solid rgb(244, 244, 244);
+    margin: 5px;
+}
+img#left {
+    float: left;
+}
+img#right {
+    float: right;
+}

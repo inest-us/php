@@ -1,0 +1,36 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+}
+div#container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(200, 200, 200);
+    position: absolute;
+}
+div#one {
+    background: pink;
+    top: 0;
+    left: 0;
+}
+div#two {
+    background: lightblue;
+    top: 0;
+    right: 0;
+}
+div#three {
+    background: yellowgreen;
+    bottom: 0;
+    left: 0;
+}
+div#four {
+    background: orange;
+    bottom: 0;
+    right: 0;
+}

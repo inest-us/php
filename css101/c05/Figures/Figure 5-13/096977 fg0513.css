@@ -1,0 +1,19 @@
+body {
+    font: 12px sans-serif;
+}
+.underline, .overline, .line-through, .blink {
+    color: darkred;
+    background: mistyrose;
+}
+.underline {
+    text-decoration: underline;
+}
+.overline {
+    text-decoration: overline;
+}
+.line-through {
+    text-decoration: line-through;
+}
+.blink {
+    text-decoration: blink;
+}

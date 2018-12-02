@@ -1,0 +1,14 @@
+img {
+    margin: 10px;
+    border: 1px solid rgb(128, 128, 128);
+}
+p {
+    font: 12px sans-serif;
+}
+div#fifty-states {
+    text-align: center;
+    border: 1px solid rgb(200, 200, 200);
+    background: lightyellow;
+    margin: 5px;
+    float: left;
+}

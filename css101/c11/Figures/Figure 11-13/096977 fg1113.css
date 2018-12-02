@@ -1,0 +1,17 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+    margin: 0;
+    padding: 0;
+}
+p {
+    background: yellowgreen;
+    border: 1px solid green;
+    padding: 5px;
+    margin: 5px;
+}
+p#absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}

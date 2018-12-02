@@ -1,0 +1,8 @@
+span {
+    background: mistyrose;
+    font-size: 75%;
+}
+span span {
+    background: pink;
+    font-size: 75%;
+}

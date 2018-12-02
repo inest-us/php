@@ -1,0 +1,25 @@
+body {
+    font-family: sans-serif;
+}
+p.container {
+    border: 1px solid rgb(29, 179, 82);
+    background: rgb(202, 222, 245);
+    padding: 10px;
+    width: 245px;
+    height: 245px;
+    float: left;
+    margin: 10px;
+}
+p.box {
+    border: 1px solid rgb(69, 199, 115);
+    background: rgb(164, 201, 245);
+}
+p.tank {
+    border: 1px solid rgb(107, 214, 145);
+    background: rgb(124, 180, 245);
+    clear: left;
+}
+p#container-1234 {
+    border: 1px solid rgb(154, 232, 181);
+    background: rgb(82, 157, 245);
+}

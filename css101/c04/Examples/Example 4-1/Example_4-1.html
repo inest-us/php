@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>Specificity</title>
+        <link rel='stylesheet' type='text/css' href='Example_4-1.css' />
+    </head>
+    <body>
+        <p>
+            Specificity is determined by how specific the selector is.
+            <span id='specific'>A specific selector wins</span>
+            over a <span>more general one</span>.
+        </p>
+        <p>
+            Order isn't important until there are one or more elements
+            of the same specificity referring to the same element.  In
+            which case, <span>the last one wins</span>.
+        </p>
+    </body>
+</html>

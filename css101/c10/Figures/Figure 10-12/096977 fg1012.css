@@ -1,0 +1,14 @@
+body, p {
+    background-color: #fff;
+    background-image: url('palms.jpg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+p {
+    border: 1px solid rgb(200, 200, 200);
+    background-image: url('palms2.jpg');
+    margin: 10px 10px 10px auto;
+    width: 200px;
+    padding: 20px;
+}

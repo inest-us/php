@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+<head>
+    <title>Class and ID Selectors</title>
+    <link rel='stylesheet' type='text/css' href='css/Example3-2.css' />
+</head>
+<body>
+    <h1>Universal Selectors</h1>
+    <p>
+        Universal selectors are wildcard selectors.
+    </p>
+    <p>
+        When a universal selector is used alone, all elements
+        within a document are selected.
+    </p>
+    <p>
+        Even form elements are selected.
+    </p>
+    <form method='post' action='Example_3-2.html'>
+        <fieldset>
+            <legend>Feedback Form</legend>
+            <table>
+                <tbody>
+                <tr>
+                    <td><label for='topic'>Topic:</label></td>
+                    <td><input type='text'
+                                name='topic'
+                                id='topic'
+                                value='Universal Selectors'
+                                size='25' />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for='feedback'>Feedback:</label></td>
+                    <td>
+                <textarea cols='55' rows='10' name='feedback' id='feedback'>
+                Universal selectors have some practical applications.
+                For instance, when debugging styles you can select
+                all elements and apply a border to see dimensions.
+                This could help you identify rogue elements causing
+                undue disorder in a document.
+                </textarea>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

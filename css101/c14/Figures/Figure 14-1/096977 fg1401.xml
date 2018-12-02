@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page>
+    <books>
+        <book favorite="true">
+             The Alchemist <cover art="alchemist.jpg"/>
+         </book>
+        <book>Dante's Inferno</book>
+    </books>
+</page>

@@ -1,0 +1,16 @@
+div {
+    padding: 3px;
+    border-color: black;
+    border-style: solid;
+    background: mistyrose;
+    margin: 5px;
+}
+div#thin {
+    border-width: thin;
+}
+div#medium {
+    border-width: medium;
+}
+div#thick {
+    border-width: thick;
+}

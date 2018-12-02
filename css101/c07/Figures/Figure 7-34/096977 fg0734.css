@@ -1,0 +1,9 @@
+table {
+    margin-bottom: 5px;
+}
+td {
+    background: lightyellow;
+}
+table, td {
+    border: 1px solid gold;
+}

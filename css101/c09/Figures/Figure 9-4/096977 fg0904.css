@@ -1,0 +1,6 @@
+li {
+    list-style-image: url('arrow.png');
+}
+li#other {
+    list-style-image: url('arrow2.png');
+}

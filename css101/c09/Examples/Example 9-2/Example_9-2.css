@@ -1,0 +1,27 @@
+li {
+    background: lightyellow;
+    border: 1px solid gold;
+    padding: 5px;
+    margin: 2px;
+}
+li#marker {
+    list-style: square;
+}
+li#position {
+    list-style: inside;
+}
+li#image {
+    list-style: url('arrow.png');
+}
+li#marker-position {
+    list-style: square inside;
+}
+li#marker-image {
+    list-style: square url('arrow.png');
+}
+li#image-position {
+    list-style: url('arrow.png') inside;
+}
+li#all-three {
+    list-style: square url('arrow.png') inside;
+}

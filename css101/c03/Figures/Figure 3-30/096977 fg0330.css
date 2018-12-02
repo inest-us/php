@@ -1,0 +1,8 @@
+* {
+    font: 14px sans-serif;
+}
+a[href^="ftp://"] {
+    background: url('save.png') no-repeat left center;
+    padding-left: 20px;
+    color: crimson;
+}

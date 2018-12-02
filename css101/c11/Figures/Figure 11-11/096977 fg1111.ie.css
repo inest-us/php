@@ -1,0 +1,10 @@
+body {
+    background: lightyellow url('http://') fixed;
+}
+div {
+    position: absolute;
+    bottom: auto;
+    top: expression(
+        (documentElement.scrollTop + documentElement.clientHeight - this.clientHeight) - 2
+    );
+}

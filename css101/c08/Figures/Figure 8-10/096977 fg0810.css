@@ -1,0 +1,30 @@
+body {
+    font: 16px sans-serif;
+}
+div#container {
+    border: 1px solid rgb(200, 200, 200);
+    margin: 0 20px;
+    background: rgb(234, 234, 234);
+    padding: 5px;
+}
+a:hover {
+    background: crimson;
+    color: white;
+}
+div#float {
+    text-align: center;
+    float: left;
+    width: 150px;
+    height: 150px;
+    border: 1px solid rgb(200, 200, 200);
+    background: rgb(234, 234, 234);
+}
+div.content {
+    background: yellow;
+    border: 1px solid  rgb(200, 200, 200);
+}
+div#clear {
+    border: 1px solid rgb(200, 200, 200);
+    background: orange;
+    clear: both;
+}

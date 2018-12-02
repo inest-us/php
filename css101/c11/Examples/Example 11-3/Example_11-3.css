@@ -1,0 +1,26 @@
+body {
+    font: 12px sans-serif;
+    background: lightyellow;
+}
+p {
+    padding: 5px;
+    margin-left: 110px;
+}
+p#long {
+    height: 400px;
+}
+div {
+    position: fixed;
+    background: gold;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+div#fixed-top {
+    top: 5px;
+    left: 5px;
+}
+div#fixed-bottom {
+    bottom: 5px;
+    left: 5px;
+}

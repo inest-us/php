@@ -1,0 +1,15 @@
+body, p {
+    background-color: #fff;
+    background-attachment: fixed;
+    background-image: url('palms.jpg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+}
+p {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid rgb(200, 200, 200);
+    background-image: url('palms2.jpg');
+    height: 400px;
+}

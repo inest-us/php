@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>Conditional Comments</title>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p>
+               This text is only seen by IE 6.0, IE 5.5, and IE 5.0, but not IE
+               7.0.  Other browsers just ignore this altogether, since it's
+               contained in HTML comments.
+            </p>
+        <![endif]-->
+        <!--[if IE 6]>
+            <p>
+                This text is only seen by IE 6.0.
+            </p>
+        <![endif]-->
+        <!--[if gt IE 6]>
+             <p>
+                This text is only seen by IE 7.0.
+             </p>
+        <![endif]-->
+    </body>
+</html>
+
+
+
+
+

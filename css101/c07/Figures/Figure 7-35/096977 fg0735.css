@@ -1,0 +1,32 @@
+img {
+    border: 1px solid black;
+    margin: 5px;
+}
+img#x-aspect-1 {
+    width: 200px;
+    height: auto;
+}
+img#x-aspect-2 {
+    width: 150px;
+    height: auto;
+}
+img#x-aspect-3 {
+    width: 100px;
+    height: auto;
+}
+img#fixed {
+    width: 200px;
+    height: 200px;
+}
+img#y-aspect-1 {
+    width: auto;
+    height: 200px;
+}
+img#y-aspect-2 {
+    width: auto;
+    height: 150px;
+}
+img#y-aspect-3 {
+    width: auto;
+    height: 100px;
+}

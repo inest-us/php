@@ -1,0 +1,9 @@
+div#left,
+div#right {
+    height: expression(documentElement.offsetHeight);
+}
+div#container {
+    left: 211px;
+    width: expression(documentElement.offsetWidth - 446);
+    height: expression(documentElement.offsetHeight);
+}

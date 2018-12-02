@@ -1,0 +1,10 @@
+body {
+    font-family: sans-serif;
+}
+* {
+    border: 1px solid yellowgreen;
+    color: green;
+    padding: 5px;
+    font-weight: normal;
+    font-size: 12px;
+}

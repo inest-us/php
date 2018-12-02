@@ -1,0 +1,37 @@
+body {
+    font: 12px sans-serif;
+    background: lightyellow;
+}
+div#offset-four {
+    background: yellow;
+    border: 1px solid rgb(128, 128, 128);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+}
+p {
+    margin: 0;
+    padding: 5px;
+    border: 1px solid black;
+}
+p#offset-x {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 123px;
+    background: gold;
+}
+p#offset-y {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    width: 100px;
+    background: khaki;
+}
+p#offset-four-copy {
+    border: none;
+    margin-right: 123px;
+}

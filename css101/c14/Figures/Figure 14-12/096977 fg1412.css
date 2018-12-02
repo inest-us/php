@@ -1,0 +1,17 @@
+favorites {
+    display: table;
+    font-family: sans-serif;
+    border: 1px solid rgb(200, 200, 200);
+    caption-side: bottom;
+    border-spacing: 2px;
+    margin: 8px;
+}
+title {
+    display: table-caption;
+}
+cols {
+    display: table-column-group;
+}
+cols album, cols artist, cols released {
+    display: table-column;
+}

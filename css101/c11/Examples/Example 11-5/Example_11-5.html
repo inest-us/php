@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>The z-index</title>
+        <link rel='stylesheet' type='text/css' href='Example_11-5.css' />
+    </head>
+    <body>
+        <div class='slide'>
+            <p>
+                The z-index property controls how elements are layered along an
+                invisible z-axis.  By default, elements are layered automatically.
+                The first instance of an absolutely positioned element results in
+                a z-index value of one, and with each subsequent element, the
+                z-index is increased.
+            </p>
+            <div class='container'>
+                <div class='zauto zone'></div>
+                <div class='zauto ztwo'></div>
+                <div class='zauto zthree'></div>
+                <div class='zauto zfour'></div>
+            </div>
+        </div>
+        <div class='slide'>
+            <p>
+                You can control the z-index explicitly, however, by providing an
+                integer value to the z-index property.
+            </p>
+            <div class='container'>
+                <div class='zauto zone' id='five'></div>
+                <div class='zauto ztwo' id='six'></div>
+                <div class='zauto zthree' id='seven'></div>
+                <div class='zauto zfour' id='eight'></div>
+            </div>
+        </div>
+        <div class='slide'>
+            <p>
+                Nested elements handle the z-index property differently. Descendant
+                elements must always have a z-index higher than that of their parent.
+            </p>
+            <div class='container' id='nested'>
+                <div class='zauto zone' id='nine'>
+                    <div class='zauto ztwo' id='ten'>
+                        <div class='zauto zthree' id='eleven'>
+                            <div class='zauto zfour' id='twelve'></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

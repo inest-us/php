@@ -1,0 +1,13 @@
+h4 {
+    font: 18px sans-serif;
+    word-spacing: 25px;
+    background: mistyrose;
+    color: crimson;
+    margin-bottom: 0;
+    border-bottom: 1px solid pink;
+}
+p {
+    color: crimson;
+    margin-top: 0;
+    font-size: 14px;
+}

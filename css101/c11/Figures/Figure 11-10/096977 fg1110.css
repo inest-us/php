@@ -1,0 +1,17 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+}
+p {
+    line-height: 2em;
+    margin: 10px 10px 10px 110px;
+}
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(200, 200, 200);
+    background: pink;
+    position: fixed;
+    top: 0;
+    left: 0;
+}

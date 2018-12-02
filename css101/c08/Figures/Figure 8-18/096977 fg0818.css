@@ -1,0 +1,17 @@
+p {
+    font: 12px sans-serif;
+}
+p#control {
+    font-size: 100px;
+    margin: 5px 0;
+}
+p#control span {
+    border: 1px solid rgb(200, 200, 200);
+    background: rgb(244, 244, 244);
+}
+p#control span span {
+    vertical-align: 300%;
+    font-size: 20px;
+    background: white;
+    border: 1px solid black;
+}

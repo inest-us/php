@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<library>
+    <books>
+        <book>The Alchemist <favorite/></book>
+        <book>Dante's Inferno</book>
+    </books>
+</library>
+<library>
+    <books>
+        <book>The Stand <favorite/></book>
+        <book>The Poet</book>
+    </books>
+</library>

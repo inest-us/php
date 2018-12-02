@@ -1,0 +1,19 @@
+body {
+    font: 14px sans-serif;
+}
+p {
+    padding: 5px 25px;
+}
+p#indent {
+    text-indent: 25px;
+}
+p#indent-percentage {
+    text-indent: 10%;
+}
+p#indent-reverse {
+    text-indent: -25px;
+}
+p.indent-example {
+    background: lightyellow;
+    border: 1px solid darkkhaki;
+}

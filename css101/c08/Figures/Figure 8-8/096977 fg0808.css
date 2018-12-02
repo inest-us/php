@@ -1,0 +1,11 @@
+img {
+    margin: 10px;
+    border: 1px solid rgb(128, 128, 128);
+    float: left;
+}
+img#mercedes-benz {
+    clear: left;
+}
+p {
+    font: 12px sans-serif;
+}

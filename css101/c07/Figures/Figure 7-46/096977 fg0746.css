@@ -1,0 +1,22 @@
+p {
+    font: 12px sans-serif;
+    border: 1px solid gold;
+    background: lightyellow;
+    padding: 5px;
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 5px;
+}
+p#visible {
+    overflow: visible;
+}
+p#auto {
+    overflow: auto;
+}
+p#scroll {
+    overflow: scroll;
+}
+p#hidden {
+    overflow: hidden;
+}

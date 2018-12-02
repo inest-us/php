@@ -1,0 +1,14 @@
+img#left {
+    float: left;
+}
+img#right {
+    float: right;
+}
+p {
+    clear: both;
+    margin: 20px 0 0 0;
+    font: 12px sans-serif;
+    border: 1px solid rgb(200, 200, 200);
+    background: rgb(244, 244, 244);
+    padding: 5px;
+}

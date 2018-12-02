@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="Example_14-4.css"?>
+<page>
+    <recipe>
+        <ingredients>
+            <title>
+                Spicy Thai Peanut Sauce
+            </title>
+            <columns>
+                <quantity/>
+                <measurement/>
+                <product/>
+                <instructions/>
+            </columns>
+            <headings>
+                <heading>
+                    <quantity>        quantity         </quantity>
+                    <measurement>     measurement      </measurement>
+                    <product>         product          </product>
+                    <instructions>    instructions     </instructions>
+                </heading>
+            </headings>
+            <ingredientsbody>
+                <ingredient>
+                    <quantity>        ½                </quantity>
+                    <measurement>     CUPS             </measurement>
+                    <product>         Peanut Oil       </product>
+                    <instructions></instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        12               </quantity>
+                    <measurement>     Each             </measurement>
+                    <product>         Serrano Peppers  </product>
+                    <instructions>    Sliced           </instructions>
+                </ingredient>
+                 <ingredient>
+                    <quantity>        16               </quantity>
+                    <measurement>     Each             </measurement>
+                    <product>         Garlic Cloves    </product>
+                    <instructions>    Minced           </instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        2                </quantity>
+                    <measurement>     CUPS             </measurement>
+                    <product>         Peanut Butter    </product>
+                    <instructions></instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        1                </quantity>
+                    <measurement>     CUPS             </measurement>
+                    <product>         Soy Sauce        </product>
+                    <instructions></instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        ½                </quantity>
+                    <measurement>     CUPS             </measurement>
+                    <product>         Lime Juice       </product>
+                    <instructions></instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        4                </quantity>
+                    <measurement>     TABLESPOONS      </measurement>
+                    <product>         Sesame Oil       </product>
+                    <instructions></instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        4                </quantity>
+                    <measurement>     CUPS             </measurement>
+                    <product>         Coconut Milk     </product>
+                    <instructions></instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        ½                </quantity>
+                    <measurement>     CUPS             </measurement>
+                    <product>         Honey            </product>
+                    <instructions></instructions>
+                </ingredient>
+                <ingredient>
+                    <quantity>        ½                </quantity>
+                    <measurement>     CUPS             </measurement>
+                    <product>         Brown Sugar      </product>
+                    <instructions></instructions>
+                </ingredient>
+            </ingredientsbody>
+        </ingredients>
+        <directions>
+            <direction>
+                Sauté sliced serranos and garlic in peanut oil
+                till lightly browned.
+            </direction>
+            <direction>
+                Add <really>all</really> other ingredients and stir till
+                dissolved.
+            </direction>
+            <direction>
+                Simmer for 5 minutes.
+            </direction>
+            <direction>
+                Purée all in blender.
+            </direction>
+         </directions>
+         <suggestions>
+            Sauté your favorite vegetables; onions, mushrooms,
+            green peppers, and squash work best. Sprinkle with allspice,
+            salt, and pepper. Optionally add walnuts or pine nuts. Add
+            browned chicken or tofu and glaze with sauce. Serve with
+            jasmine rice.
+         </suggestions>
+    </recipe>
+</page>

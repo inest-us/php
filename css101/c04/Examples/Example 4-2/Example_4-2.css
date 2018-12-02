@@ -1,0 +1,9 @@
+body {
+    font: 14px sans-serif;
+}
+span#precedence {
+    background: lightyellow;
+}
+span {
+    background: orange !important;
+}

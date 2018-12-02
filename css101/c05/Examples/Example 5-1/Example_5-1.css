@@ -1,0 +1,22 @@
+body {
+    font: 14px sans-serif;
+}
+h4 {
+    border-bottom: 1px solid green;
+    margin-bottom: 3px;
+}
+p {
+    margin: 0;
+}
+.code {
+    font-family: monospace;
+}
+.higher,
+.lower {
+    letter-spacing: 5px;
+    background: lavender;
+    color: midnightblue;
+}
+.lower {
+    letter-spacing: -1px;
+}

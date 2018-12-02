@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>Relative Positioning</title>
+        <link rel='stylesheet' type='text/css' href='Example_11-2.css' />
+    </head>
+    <body>
+        <p>
+            Relative positioning has two primary purposes in web design.
+            The first purpose is to create a point of reference for
+            an absolutely positioned element.  When an element with absolute
+            positioning is nested within an element with relative positioning,
+            the absolutely positioned element is positioned in context to
+            the dimensions of the relatively positioned element.
+        </p>
+        <div id='relative'>
+            <p>
+                Relative positioning is a lot like static positioning; elements
+                don't appear to leave the flow of the document.
+            </p>
+            <p id='bottom-right'>
+                This element is positioned to the bottom right of the
+                relatively positioned element.
+            </p>
+        </div>
+        <p>
+            The four offset properties can also be applied to relatively
+            positioned elements, which can be used to modify the position
+            of an element.
+        </p>
+        <div>
+            <p id='offset'>
+                This element is offset from its original position.
+            </p>
+        </div>
+    </body>
+</html>

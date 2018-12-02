@@ -1,0 +1,6 @@
+div.planet {
+    height: expression(document.getElementById('solar-system').offsetHeight - 25);
+}
+div.planet-copy {
+    height: expression(document.getElementById('solar-system').offsetHeight - 45);
+}

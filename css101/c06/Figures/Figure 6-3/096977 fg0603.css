@@ -1,0 +1,21 @@
+body {
+    font-size: 24px;
+}
+p {
+    margin: 0;
+}
+p#serif {
+    font-family: serif;
+}
+p#sans-serif {
+    font-family: sans-serif;
+}
+p#monospace {
+    font-family: monospace;
+}
+p#fantasy {
+    font-family: fantasy;
+}
+p#cursive {
+    font-family: cursive;
+}

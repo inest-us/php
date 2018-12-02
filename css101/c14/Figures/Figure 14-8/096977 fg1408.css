@@ -1,0 +1,8 @@
+list {
+    display: block;
+    margin-left: 20px;
+    list-style: decimal;
+}
+item {
+    display: list-item;
+}

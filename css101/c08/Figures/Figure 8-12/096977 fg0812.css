@@ -1,0 +1,17 @@
+div#container {
+    font: 16px sans-serif;
+    margin: 0 20px;
+    background: yellow;
+    width: 300px;
+}
+div#float {
+    background: rgb(234, 234, 234);
+    float: left;
+    border: 1px solid black;
+    width: 75px;
+    height: 50px;
+}
+p {
+    margin-left: 76px;
+    border: 1px solid black;
+}

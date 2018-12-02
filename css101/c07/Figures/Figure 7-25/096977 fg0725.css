@@ -1,0 +1,28 @@
+div {
+    padding: 3px;
+    border-color: khaki;
+    border-style: solid;
+    background: lightyellow;
+    margin: 5px;
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+div#properties {
+    border-top-width: 2px;
+    border-right-width: 4px;
+    border-bottom-width: 8px;
+    border-left-width: 10px;
+}
+div#four {
+    border-width: 2px 4px 8px 10px;
+}
+div#three {
+    border-width: 2px 4px 8px;
+}
+div#two {
+    border-width: 8px 4px;
+}
+div#one {
+    border-width: 4px;
+}

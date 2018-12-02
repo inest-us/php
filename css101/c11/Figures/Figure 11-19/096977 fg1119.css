@@ -1,0 +1,33 @@
+body {
+    background: lightyellow;
+    font: 12px sans-serif;
+    margin: 0;
+    padding: 0;
+}
+div#container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 31px;
+    left: 0;
+    overflow: auto;
+    padding: 0 10px;
+    line-height: 2em;
+}
+div#footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 20px;
+    font-weight: normal;
+    font-size: 14px;
+    text-align: center;
+    border-top: 1px solid rgb(200, 200, 200);
+    background: white;
+    margin: 0;
+    padding: 5px;
+}
+div#footer p {
+    margin: 0;
+}

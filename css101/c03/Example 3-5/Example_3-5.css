@@ -1,0 +1,16 @@
+body {
+    font: 12px sans-serif;
+}
+p {
+    padding: 5px;
+}
+h1 + p {
+    background: lightyellow;
+    color: darkkhaki;
+    border: 1px solid darkkhaki;
+}
+h1 + p + p {
+    background: yellowgreen;
+    color: green;
+    border: 1px solid green;
+}

@@ -1,0 +1,31 @@
+body {
+    font: 14px sans-serif;
+}
+h1 {
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+}
+li {
+    margin: 5px 0;
+}
+a {
+    padding-left: 20px;
+}
+a[href^="ftp://"] {
+    color: goldenrod;
+    background: url('save.png') no-repeat left center;
+}
+a[href*="#"] {
+    color: cadetblue;
+    background: url('anchor.png') no-repeat left center;
+}
+a[href$=".html"] {
+    color: dodgerblue;
+    background: url('firefox.png') no-repeat left center;
+}
+a[href$=".pdf"] {
+    color: red;
+    background: url('pdf.png') no-repeat left center;
+}

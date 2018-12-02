@@ -1,0 +1,20 @@
+@media screen {
+    p {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid gold;
+        background: yellow;
+        overflow: auto;
+        text-align: justify
+    }
+}
+@media print {
+    p {
+        width: 2in;
+        padding: 0.25in;
+        border: 1pt solid black;
+        text-align: justify;
+    }
+}

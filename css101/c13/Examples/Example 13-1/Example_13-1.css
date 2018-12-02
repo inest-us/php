@@ -1,0 +1,24 @@
+p {
+    font: 12px sans-serif;
+    background: yellow;
+    padding: 10px;
+}
+@media screen {
+    p#print {
+        display: none;
+    }
+    p#screen {
+        border: 10px solid gold;
+    }
+}
+@media print {
+    p {
+        padding: 0.05in;
+    }
+    p#print {
+        border: 10pt solid gold;
+    }
+    p#screen {
+        display: none;
+    }
+}

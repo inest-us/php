@@ -1,0 +1,16 @@
+div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgb(128, 128, 128);
+    margin: 4px;
+    float: left;
+    background-image: url('tree.png');
+    background-repeat: no-repeat;
+    font: 12px sans-serif;
+}
+div#keyword-length     {background-position: top 10px;  }
+div#length-keyword     {background-position: 10px top;  }
+div#keyword-percentage {background-position: center 50%;}
+div#percentage-keyword {background-position: 50% center;}
+div#percentage-length  {background-position: 50% 10px;  }
+div#length-percentage  {background-position: 10px 50%;  }

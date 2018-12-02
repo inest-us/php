@@ -1,0 +1,32 @@
+body {
+    font-face: sans-serif;
+}
+h1 {
+    margin: 5px;
+}
+del {
+    color: crimson;
+}
+ins {
+    color: forestgreen;
+}
+p {
+    border: 1px solid rgb(200, 200, 200);
+    background: rgb(234, 234, 234);
+    padding: 5px;
+    margin: 5px;
+}
+p.note {
+    background: yellow;
+    border: 1px solid gold;
+}
+span.code {
+    font-family: monospace;
+    padding: 0 10px;
+}
+p > span.code {
+    background: yellow;
+}
+p.note > span.code {
+    background: lightyellow;
+}

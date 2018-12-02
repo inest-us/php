@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en'>
+    <head>
+        <title>Fixed Positioning</title>
+        <link rel='stylesheet' type='text/css' href='Example_11-3.css' />
+        <!--[if lt IE 7]>
+        <link rel='stylesheet' type='text/css' href='Example_11-3.ie.css' />
+        <![endif]-->
+    </head>
+    <body>
+        <div id='fixed-top'>
+        </div>
+        <div id='fixed-bottom'>
+        </div>
+        <p>
+            The concept of fixed positioning is pretty straightforward.
+            Elements with a fixed position stay in place, even when a document
+            is scrolled.  Elements with a fixed position are always positioned
+            relative to the browser's viewport, no matter where they appear
+            in a document's structure.
+        </p>
+        <p>
+            IE6 and IE7 in quirks mode do not support fixed positioning, even
+            though IE7 in standards mode does support fixed positioning.  Some
+            tricks are employed to make the document work in IE6, in standards
+            mode.
+        </p>
+        <p>
+            Even though fixed positioning technically allows an element to be
+            placed anywhere in the document's structure, the IE hacks that I
+            present here require that fixed position elements always be immediate
+            children of the &lt;body&gt; element.
+        </p>
+        <p id='long'>
+            This element is used to make the document longer, so that scroll bars
+            are invoked.
+        </p>
+    </body>
+</html>

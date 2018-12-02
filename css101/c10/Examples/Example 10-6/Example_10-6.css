@@ -1,0 +1,25 @@
+p {
+    clear: left;
+}
+div {
+    border: 1px solid yellow;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    float: left;
+}
+div#background {
+    background: white url('pattern.png') no-repeat scroll center center;
+}
+div#background-color {
+    background: yellow;
+}
+div#background-image-position {
+    background: white url('pattern.png') center center;
+}
+div#background-image-repeat {
+    background: url('pattern.png') repeat-x;
+}
+div#background-image-repeat-attachment {
+    background: url('pattern.png') repeat-y scroll;
+}

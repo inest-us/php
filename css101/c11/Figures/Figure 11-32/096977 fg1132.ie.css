@@ -1,0 +1,14 @@
+div#heading,
+div#footer,
+div#container {
+    width: expression(
+        documentElement.clientWidth >= 1000?
+            1000
+        :
+            (documentElement.clientWidth <= 600? 600 : 'auto')
+    );
+    height: 1px;
+}
+div#left {
+    height: expression(document.getElementById('container').offsetHeight - 12);
+}

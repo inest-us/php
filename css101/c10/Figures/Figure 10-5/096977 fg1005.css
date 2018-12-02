@@ -1,0 +1,22 @@
+div {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    float: left;
+    background-image: url('pattern.png');
+    background-color: lightyellow;
+    border: 1px solid rgb(233, 223, 200);
+    padding: 2px;
+}
+div#repeat {
+    background-repeat: repeat;
+}
+div#repeat-x {
+    background-repeat: repeat-x;
+}
+div#repeat-y {
+    background-repeat: repeat-y;
+}
+div#no-repeat {
+    background-repeat: no-repeat;
+}
