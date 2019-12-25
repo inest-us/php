@@ -10,13 +10,9 @@
 </head>
 
 <body>
-
 	<div id="page-wrap">
-
 		<h1>Final Quiz for Lip building</h1>
-		
         <?php
-            
             $answer1 = $_POST['question-1-answers'];
             $answer2 = $_POST['question-2-answers'];
             $answer3 = $_POST['question-3-answers'];

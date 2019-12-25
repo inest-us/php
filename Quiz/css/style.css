@@ -11,7 +11,7 @@ body				{ font: 14px Georgia, serif; }
 
 h1                  { margin: 25px 0; font: 14px Georgia, Serif; text-transform: uppercase; letter-spacing: 3px; }
 
-#quiz input {
+#quiz input { 
     vertical-align: middle;
 }
 
