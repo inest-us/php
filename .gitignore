@@ -57,3 +57,4 @@ login.php
 #images
 *.jpg
 .DS_Store
+dcp/db.php
