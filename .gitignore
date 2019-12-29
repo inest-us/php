@@ -58,3 +58,4 @@ login.php
 *.jpg
 .DS_Store
 dcp/db.php
+.DS_Store
