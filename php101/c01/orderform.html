@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>order form</title>
+    </head>
+    <body>
+        <form action="processorder.php" method="post">
+            <table border="0">
+                <tr bgcolor="#cccccc">
+                    <th width="150">Item</th>
+                    <th width="15">Quantity</th>
+                </tr>
+                <tr>
+                    <td>Tires</td>
+                    <td align="left">
+                        <input
+                            type="text"
+                            name="tireqty"
+                            size="3"
+                            maxlength="3"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Oil</td>
+                    <td align="left">
+                        <input
+                            type="text"
+                            name="oilqty"
+                            size="3"
+                            maxlength="3"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Spark Plugs</td>
+                    <td align="left">
+                        <input
+                            type="text"
+                            name="sparkqty"
+                            size="3"
+                            maxlength="3"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Shipping Address</td>
+                    <td align="left">
+                        <input
+                            type="text"
+                            name="address"
+                            size="100"
+                            maxlength="100"
+                        />
+                    </td>
+                </tr>
+                <tr>
+                    <td>How did you find Bob's</td>
+                    <td>
+                        <select name="find">
+                            <option value="a">I’m a regular customer</option>
+                            <option value="b">TV advertising</option>
+                            <option value="c">Phone directory</option>
+                            <option value="d">Word of mouth</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="left">
+                        <input type="submit" value="Submit Order" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
