@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>feedback</title>
+        <link rel="stylesheet" href="../css/style.css" />
+    </head>
+    <body>
+        <h1>Customer Feedback</h1>
+        <h2>Please tell us what you think</h2>
+        <form action="processfeedback.php" method="post">
+            <div>
+                <label>Your name:</label>
+                <input type="text" name="name" />
+            </div>
+            <div>
+                <label>your email address:</label>
+                <input type="text" name="email" />
+            </div>
+            <div>
+                <label>Your feedback:</label>
+                <input type="text" name="feedback" />
+            </div>
+            <button type="submit" name="submitBtn">Send feedback</button>
+        </form>
+    </body>
+</html>
