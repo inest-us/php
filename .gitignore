@@ -59,3 +59,5 @@ login.php
 .DS_Store
 dcp/db.php
 .DS_Store
+php101/c10/testdb.php
+php101/c10/pdotest.php
