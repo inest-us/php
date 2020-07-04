@@ -1,0 +1,5 @@
+CREATE TABLE `inest_stg_db`.`Books_Reviews` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `ISBN` VARCHAR(13) NULL,
+  `Review` TEXT(4000) NULL,
+  PRIMARY KEY (`ID`));
