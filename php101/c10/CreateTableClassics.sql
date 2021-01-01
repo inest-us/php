@@ -1,0 +1,8 @@
+CREATE TABLE `classics` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Author` VARCHAR(255),
+  `Title` VARCHAR(255),
+  `Category` VARCHAR(255),
+  `Year` VARCHAR(255),
+  `ISBN` VARCHAR(255),
+  PRIMARY KEY (`Id`));

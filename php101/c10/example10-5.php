@@ -12,11 +12,11 @@ try {
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     
     while ($r = $stmt->fetch()) {
-		echo 'Author: '   . $r['author'] . '<br />';
-		echo 'Title: '    . $r['title'] . '<br />';
-		echo 'Category: ' . $r['type'] . '<br />';
-		echo 'Year: '     . $r['year'] . '<br />';
-		echo 'ISBN: '     . $r['isbn'] . '<br /><br />';
+		echo 'Author: '   . $r['Author'] . '<br />';
+		echo 'Title: '    . $r['Title'] . '<br />';
+		echo 'Category: ' . $r['Category'] . '<br />';
+		echo 'Year: '     . $r['Year'] . '<br />';
+		echo 'ISBN: '     . $r['ISBN'] . '<br /><br />';
     }
 
     //close the connection

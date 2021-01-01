@@ -22,4 +22,6 @@
 		echo "<br />";
 	}
 	echo "</pre>";
+
+	echo $chessboard[7][4]; //Q
 ?>

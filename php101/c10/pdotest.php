@@ -1,7 +1,8 @@
 <?php
-require_once 'example10-1.php';
+require_once 'login.php';
 try {
     $conn = new PDO("mysql:host=$db_hostname;dbname=$db_database", $db_username, $db_password);
+    
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully. <br />";
@@ -11,7 +12,7 @@ try {
     $stmt->setFetchMode(PDO::FETCH_ASSOC);
     
     while ($r = $stmt->fetch()) {
-        echo $r['author'] . "<br />";
+        echo $r['Author'] . "<br />";
     }
 
     //close the connection

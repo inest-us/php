@@ -26,4 +26,6 @@
 	}
 		
 	echo "</pre>";
+
+	echo $products['misc']['glue']; //Adhesives
 ?>

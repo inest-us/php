@@ -11,4 +11,7 @@
 				'photo'  => "Photographic Paper");
 
 	echo "p2 element: " . $p2['inkjet'] . "<br />";
+	
+	echo $p1['inkjet']; //undefined index
+	echo $p2['3']; //undefine offset
 ?>

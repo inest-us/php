@@ -1,5 +1,5 @@
 <?php 
-	$cmd = "dir";   
+	$cmd = "ls";   
 
 	exec(escapeshellcmd($cmd), $output, $status);
 
@@ -8,6 +8,8 @@
 	}
 	else {
 		echo "<pre>";
-		foreach($output as $line) echo "$line\n";
+		foreach($output as $line) {
+			echo "$line\n";
+		}	
 	}
 ?>

@@ -26,21 +26,22 @@ if (isset($_POST['author']) &&
 	$year     = get_post('year');
 	$isbn     = get_post('isbn');
 
-	echo "author: " . $author . "<br />";
-	$sql = "INSERT INTO classics VALUES ('$author', '$title', '$category', '$year', '$isbn')";
+	$sql = "INSERT INTO classics(Author, Title, Category, Year, ISBN) VALUES ('$author', '$title', '$category', '$year', '$isbn')";
 	$stmt = $conn->prepare($sql);
 	$stmt->execute();
 }
 
 echo <<<_END
-<form action="example10-8.php" method="post"><pre>
-  Author <input type="text" name="author" />
-   Title <input type="text" name="title" />
-Category <input type="text" name="category" />
-    Year <input type="text" name="year" />
-    ISBN <input type="text" name="isbn" />
-         <input type="submit" value="ADD RECORD" />
-</pre></form>
+<form action="example10-8.php" method="post">
+<pre>
+Author		<input type="text" name="author" />
+Title 		<input type="text" name="title" />
+Category	<input type="text" name="category" />
+Year 		<input type="text" name="year" />
+ISBN 		<input type="text" name="isbn" />
+<input type="submit" value="ADD RECORD" />
+</pre>
+</form>
 _END;
 
 $sql = "SELECT * FROM classics";
@@ -50,21 +51,21 @@ $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
 while ($row = $stmt->fetch()) 
 {
-	echo "Author: " . $row['author'] . "<br />";
-	echo "Title: " .  $row['title'] . "<br />";
-	echo "Category: " . $row['type'] . "<br />";
-	echo "Year: " . $row['year'] . "<br />";
-	echo "ISBN: " . $row['isbn'] . "<br />";
+	echo "Author: " . $row['Author'] . "<br />";
+	echo "Title: " .  $row['Title'] . "<br />";
+	echo "Category: " . $row['Category'] . "<br />";
+	echo "Year: " . $row['Year'] . "<br />";
+	echo "ISBN: " . $row['ISBN'] . "<br />";
 	echo "<form action='example10-8.php' method='post'>";
 	echo "<input type='hidden' name='delete' value='yes' />";
-	echo "<input type='hidden' name='isbn' value='" . $row['isbn'] . "' />";
+	echo "<input type='hidden' name='isbn' value='" . $row['ISBN'] . "' />";
 	echo "<input type='submit' value='DELETE RECORD' /></form>";
 }
 
 $conn = null;
 
 function get_post($var)
-{
-	return mysql_escape_string($_POST[$var]);
+{	
+	return htmlspecialchars($_POST[$var], ENT_QUOTES | ENT_SUBSTITUTE, "UTF-8");
 }
 ?>
