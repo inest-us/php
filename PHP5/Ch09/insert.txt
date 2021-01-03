@@ -1,0 +1,7 @@
+INSERT INTO user VALUES(
+'localhost',
+'phpuser',
+PASSWORD('phppass'),
+'N','N','N','N','N','N','N','N','N',
+'N','N','N','N','N','N','N','N','N',
+'N','N','N','N','N','N','N','N','N','N');

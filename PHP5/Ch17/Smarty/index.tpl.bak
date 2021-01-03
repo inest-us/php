@@ -1,0 +1,8 @@
+<HTML> 
+<BODY>
+<B>Here's a list of Player's position: </B><BR><BR> 
+{section name=position loop=$results} 
+  {$results[position]}<BR>
+{/section} 
+</BODY> 
+</HTML> 

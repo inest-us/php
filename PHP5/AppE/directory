@@ -1,0 +1,7 @@
+<?php
+$dir = shell_exec("dir");
+$subject = "Half-hourly file report.";
+$body = "The following files are in the current directory : \n\n";
+$body .= $dir;
+mail("dlmercer@hotmail.com", $subject, $body, "From:davidm@contechst.com\r\n");
+?>

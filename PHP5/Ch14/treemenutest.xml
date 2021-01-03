@@ -1,0 +1,9 @@
+<treemenu>
+   <node text="Home" icon="folder.gif" link="treemenutest.php" />
+   <node text="Health and Safety" icon="folder.gif">
+      <node text="About Health and Safety" icon="document.gif" link="#" />
+      <node text="Accident Policy" icon="document.gif" link="#" />
+      <node text="Sickness Policy" icon="document.gif" link="#" />
+      <node text="Long Term Sickness" icon="document.gif" link="#" />
+   </node>
+</treemenu>

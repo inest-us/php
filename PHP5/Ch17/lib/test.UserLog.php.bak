@@ -1,0 +1,192 @@
+<?php
+
+require_once ("../settings-test.php");
+require_once ("class.UserLog.php");
+require_once ("phpunit/phpunit.php");
+
+class TestUserLog extends TestCase 
+{
+    private $ulGood = null;
+    private $ulBad = null;
+
+    function setUp() 
+    {
+        $this->ulGood = new UserLog (
+            array ('site'      => 1, 
+                   'section'   => 2,
+                   'login'     => "3",
+                   'session'   => "1E23553",
+                   'firstname' => "Alice",
+                   'lastname'  => "AppleGate",
+                   'address1'  => "123Main",
+                   'city'      => "Sandusky",
+                   'state'     => "OH",
+                   'zip'       => "44870",
+                   'demo0'     => "21",
+                   'demo1'     => "15",
+                   'demo2'     => "22",
+                   'demo3'     => "26"));
+
+        $this->ulBad = new UserLog (
+            array ('site'      => 0, 
+                   'section'   => 0,
+                   'login'     => "",
+                   'session'   => "1E23553",
+                   'firstname' => "Alice",
+                   'lastname'  => "AppleGate",
+                   'address1'  => "123Main",
+                   'city'      => "Sandusky",
+                   'state'     => "OH",
+                   'zip'       => "44870",
+                   'demo0'     => "21",
+                   'demo1'     => "15",
+                   'demo2'     => "22",
+                   'demo3'     => "26"));
+    }
+
+    function testValid0() 
+    {
+        $this->assertEquals("Sandusky", $this->ulGood->city, "invalid city");
+        $this->assertEquals(true, $this->ulGood->isValid(), "valid log");
+        $this->assertEquals(0, count ($this->ulGood->getInvalidData()), 
+                            "valid count");
+    }
+
+    function testInvalid0() 
+    {
+        $ul = new UserLog (array ('site'      => 0, 
+                                  'section'   => 9,
+                                  'login'     => "user101",
+                                  'session'   => "1E23553",
+                                  'firstname' => "Alice",
+                                  'lastname'  => "AppleGate",
+                                  'address1'  => "123Main",
+                                  'city'      => "Sandusky",
+                                  'state'     => "OH",
+                                  'zip'       => "44870",
+                                  'demo0'     => "21",
+                                  'demo1'     => "15",
+                                  'demo2'     => "22",
+                                  'demo3'     => "26"));
+        $this->assertEquals(false, $ul->isValid(), "invalid ul");
+        $this->assertEquals(1, count ($ul->getInvalidData()), "invalid site");
+    }
+
+    function testInvalid1() 
+    {
+
+        $this->assertEquals(false, $this->ulBad->isValid(), "invalid ul");
+        $this->assertEquals(3, count ($this->ulBad->getInvalidData()), 
+                            "invalid site, section, and login");
+    }
+
+    function testGoodPersist0() 
+    {
+        try {
+            $this->ulGood->persist();
+            $this->assert(true);
+        } catch (MultiLogException $e) {
+            $this->assert(false);
+            print ($e->getErrorMessage());
+        }
+    }
+
+
+    function testBadPersist0() 
+    {
+        try {
+            $this->ulBad->persist();
+            $this->assert(false); // it should fail
+        } catch (MultiLogInvalidDataException $e) {
+            $this->assert(true);
+        }
+        
+    }
+
+    function testBadPersist1() 
+    {
+        try {
+            $this->ulGood->persist();
+            $this->assert(true);
+            $this->ulGood->persist();
+            $this->assert(false); // it should fail
+        } catch (MultiLogInvalidDatabaseException $e) {
+            $this->assert(true);
+        } catch (MultiLogDatabaseQueryException $e) {
+            $this->assert(false); // wrong one
+        }
+    }
+
+    /**
+     * Intentionally mess up the SQL generation by SQL injection
+     */
+    function testBadPersist2_fail() 
+    {
+
+        $ul = new UserLog (array ('site'      => "1", 
+                                  'section'   => "9",
+                                  'login'     => "user101",
+                                  'session'   => "1' where '1' and '1"));
+
+        try {
+            $ul->persist();
+            $this->assert(false); // it should fail
+        } catch (MultiLogDatabaseQueryException $e) {
+            $this->assert(true);
+        }
+    }
+
+    function testSqlGeneration0()
+    {
+        $this->assert(strpos (" ".$this->ulGood->toSQL(), "insert into user_log        ( visit_date, visit_time, site_id, demo_id, login_id, session, firstname, lastname, address1, address2, city, state, zip )") > 0, "invalid SQL generation first");
+        $this->assert(strpos (" ".$this->ulGood->toSQL(), "1, 2, '3', '1E23553', 'Alice', 'AppleGate', '123Main', '', 'Sandusky', 'OH', '44870' )") > 0, "invalid SQL generation last");
+    }
+
+    function testHtmlGeneration0 ()
+    {
+        $this->assert(strpos (" ".$this->ulGood->toHTML(), "<tr") > 0);
+        $this->assert(strpos ($this->ulGood->toHTML(), ">AppleGate</td><td") > 0);
+    }
+
+    function testDemo0 ()
+    {
+        $this->assertEquals(4, count($this->ulGood->getDemographics()));
+        $this->assertEquals(4, count($this->ulBad->getDemographics()));
+    }
+
+    function testDemo1 ()
+    {
+        include ("../logs/initialize.php"); // re-create db
+
+        try {
+            $this->ulGood->persist();
+            $this->assert(true);
+        } catch (MultiLogException $e) {
+            $this->assert(false);
+            print ($e->getErrorMessage());
+            return;
+        }
+
+        $this->db = LogUtils::openDatabase();
+        $query = LogUtils::executeQuery ($this->db, "select count(*) from user_demographics");
+print_r($query);
+        $row = LogUtils::getQueryArray($query);
+        $this->assertEquals ("4", $row[0]);
+    }
+}
+
+$suite = new TestSuite;
+$suite->addTest(new TestUserLog("testValid0"));
+$suite->addTest(new TestUserLog("testInvalid0"));
+$suite->addTest(new TestUserLog("testInvalid1"));
+$suite->addTest(new TestUserLog("testGoodPersist0"));
+$suite->addTest(new TestUserLog("testBadPersist0"));
+$suite->addTest(new TestUserLog("testBadPersist1"));
+$suite->addTest(new TestUserLog("testBadPersist2_fail"));
+$suite->addTest(new TestUserLog("testSqlGeneration0"));
+$suite->addTest(new TestUserLog("testHtmlGeneration0"));
+$suite->addTest(new TestUserLog("testDemo0"));
+$suite->addTest(new TestUserLog("testDemo1"));
+
+$testRunner = new TestRunner();
+$testRunner->run( $suite );

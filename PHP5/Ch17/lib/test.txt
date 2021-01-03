@@ -1,0 +1,2 @@
+
+http://localhost/php5/casestudy-c17/userlog.php?site=101&sectionid=1&login=user101&sessionid=1E23553&firstname=Alice&lastname=AppleGate&address1=123Main&city=Sandusky&state=OH&zip=44870&demo0=21&demo1=15&demo2=22&demo3=26

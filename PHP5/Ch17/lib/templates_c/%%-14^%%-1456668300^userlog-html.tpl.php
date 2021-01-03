@@ -1,0 +1,3 @@
+<?php /* Smarty version 2.6.2, created on 2004-04-23 23:27:26
+         compiled from userlog-html.tpl */ ?>
+<tr class="UserLogTR"><?php if (count($_from = (array)$this->_tpl_vars['ul']->getProperties())):foreach ($_from as $this->_tpl_vars['prop'] => $this->_tpl_vars['value']):?><td class="UserLog-<?php echo $this->_tpl_vars['prop']; ?>"><?php echo $this->_tpl_vars['value']; ?></td><?php endforeach; unset($_from); endif;  if (count($_from = (array)$this->_tpl_vars['ul']->getDemographics())):foreach ($_from as $this->_tpl_vars['i'] => $this->_tpl_vars['demo']): echo $this->_tpl_vars['demo']->toHTML(true);  endforeach; unset($_from); endif; ?></tr>

@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<php_programs>
+   <program name="cart">
+      <price>100</price>
+   </program>
+   <program name="survey">
+      <price>500</price>
+   </program>
+</php_programs>

@@ -1,0 +1,191 @@
+<? 
+
+require_once ("common.php");
+require_once ("class.PersistableLog.php");
+require_once ("class.UserDemographic.php");
+require_once ($GLOBALS["smarty-path"].'Smarty.class.php'); 
+
+/**
+ * Class: UserLog 
+ *          (extends PersistableLog)
+ *
+ * Responsibilities:
+ *   Contains user log data, maps said data to a database and offers
+ *   other associated functionality.  
+ *   Contains [an arbitrary] associated demographic answers.
+ *   Associates the demographic answers with the demographic questions
+ *   which are unique to a site.
+ *
+ * Collaborations:
+ *   Depends upon classes implementing the DataValidation interface.
+ *   Leverages LogUtils for database abstraction.
+ *   Contained within LogContainer.
+ *
+ * UserLog holds the bulk of the incoming data and associates
+ * the demographic display answers.  It is self-validating and stores itself
+ * to a sqlite database via the PersistableLog class.
+ */
+class UserLog extends PersistableLog
+{
+    private $demographics = array();
+    private $id = 0;
+
+    /**
+     * Primarialy maps the incoming data (an associative array) to our
+     * internal state and database level names.
+     */
+    function __construct ($initdict) // pass by value on purpose
+    {
+        $key = "";
+        $this->db = LogUtils::openDatabase ();
+        $this->id = LogUtils::getDef ($initdict["user_log_id"], 0);
+
+        /*
+         * Here is where we associate our internal representation of the data
+         * with the name of the associated piece in the database (both of
+         * which are stored in PersistableLog) in a very declaritave manner.
+         *
+         * In order to distance ourself from the underlying database, some of
+         * the names differ but mostly because of their perspective.  For 
+         * instance, what we call "section" in really a demographic id or
+         * "demo_id" in the database.
+         *
+         * Revisiting an item multiple times is not an error but is either a
+         * matter of associating a default value or re-mapping two names into
+         * one.  For instance, what we call "section" can also be called 
+         * "section_id" and both are mapped to "demo_id" which uses the
+         * the previous declaration as the incoming value for the current one.
+         *
+         * Also note that in contrast to staying within 80 columns, this uses
+         * l o n g  lines because it is much easier to grok if displayed in
+         * columns.
+         */
+
+        $key="visit_date"; $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], LogUtils::formattedDate()), $key,      "Date of visit");
+        $key="visit_time"; $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], LogUtils::formattedTime()), $key,      "Time of visit");
+
+        $key="site";       $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], 0),                "site_id", "Site ID");
+        $key="site_id";    $this->setProperty ("site",    LogUtils::getDef ($initdict[$key], $this->site),      $key,      "Site ID");
+
+        $key="section";    $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], 0),                "demo_id", "Section ID");
+        $key="section_id"; $this->setProperty ("section", LogUtils::getDef ($initdict["demo_id"], $this->section), "demo_id", "Section ID");
+
+        $key="login";      $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               "login_id","Login ID");
+        $key="login_id";   $this->setProperty ("login",   LogUtils::getDef ($initdict[$key], $this->login),     $key,      "Login ID");
+        $key="session";    $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "Session");
+        $key="firstname";  $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "First Name");
+        $key="lastname";   $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "Last/Sur Name");
+        $key="address1";   $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "Address Line 1");
+        $key="address2";   $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "Address Line 2");
+        $key="city";       $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "City");
+        $key="state";      $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "State/Province");
+        $key="zip";        $this->setProperty ($key,      LogUtils::getDef ($initdict[$key], ""),               $key,      "ZIP/Postal Code");
+
+        // set an arbitrary number of demographics, untill we stop finding 
+        // them or reach our upper limit
+        for ($i=0; $i <= $GLOBALS['maxdemo']; $i++) {
+            $key = 'demo'.$i;
+            if (array_key_exists($key, $initdict)) {
+                $d = new UserDemographic (
+                    array("id"=>$this->id, "demo"=>$initdict[$key])); 
+                array_push ($this->demographics, $d);
+            } else {
+                break;
+            }
+        }
+    }
+
+    /**
+     * There are many ways to do this, smarty is one of them.  We aren't
+     * dumping the output to screen, but capturing it instead.
+     */
+    function toHTML () {
+        $smarty = new Smarty;
+        $smarty->assign ('ul', $this);
+        return $smarty->fetch ("userlog-html.tpl");
+    }
+
+    function getDemographics ()
+    {
+        return $this->demographics; // local array
+    }
+
+    /**
+     * Re-associate the unique demographic answers with the not-unique
+     * pre-defined questions, remember that the questions are based on 
+     * the site/demo_id.
+     */
+    function gatherDemographics () 
+    {
+        if (!$this->db) $this->db = LogUtils::openDatabase();
+        $sql = "
+select ud.user_log_id as id, ud.answer as demo, dd.question as question
+from user_demographics ud 
+    left join user_log ul on ud.user_log_id = ul.user_log_id
+    left outer join demographic_description dd on 
+       ( ul.demo_id = dd.demo_id and ud.seq = dd.seq )
+where ul.user_log_id = '".$this->id."' and ul.site_id = '".
+$this->site."' and ul.demo_id = ".$this->section." order by ud.seq";
+
+        $query =  LogUtils::executeQuery ($this->db, $sql);
+        if ( !$query ) {
+            throw new MultiLogDatabaseQueryException ($sql); 
+        }
+
+        while ($row = LogUtils::getQueryArray($query)) {
+            $demo = new UserDemographic ($row);
+            if ($demo->isValid()) {
+                array_push ($this->demographics, $demo);
+            }
+        }
+
+        LogUtils::closeDatabase ($this->db);
+    }
+
+    /**
+     * Used to validate the UsrLog object, is called from both
+     * PersistableLog::isValid() and from the exception classes.
+     */
+    function getInvalidData () 
+    {
+        $badDataEntries = array();
+        if ($this->site == 0) { 
+            array_push ($badDataEntries, "'site' is zero"); 
+        }
+
+        if ($this->section == 0) { 
+            array_push ($badDataEntries, "'section' is zero"); 
+        }
+
+        if ($this->login == "") { 
+            array_push ($badDataEntries, "'login' is missing"); 
+        }
+
+        return $badDataEntries;
+    }
+
+
+    /**
+     * This is re-defined so that we can persist each of our demographic
+     * answers after we have persisted ourself.  Each demographic answer
+     * is associated with a UserLog and thus requires the primary key of
+     * the UserLog (which we have access to after the UserLog is
+     * persisted.
+     */
+    function persist()
+    {
+        // persist ourself
+        $this->id = parent::persist();
+
+        // persist our demographics, order matters
+        $i=0;
+        foreach ($this->demographics as $demo) {
+            $demo->setId($this->id);
+            $demo->setSequence($i++);
+            $demo->persist();
+        }
+    }
+
+}
+
+?>

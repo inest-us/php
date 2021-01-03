@@ -1,0 +1,56 @@
+<?
+class XMLHTMLTree {
+
+  private $xml_content;
+  private $hanTreeHandoff;
+  private $objHTMLTreeMenu;
+  
+  function __construct($strXMLSourceFile = "", $strXMLSource = "") {
+    if ($strXMLSourceFile) {
+      $this->xml_content = implode('', @file($strXMLSourceFile));
+    } else {
+      $this->xml_content = $strXMLSource;
+    };
+    $this->objHTMLTreeMenu  = new HTML_TreeMenu();
+    $this->depth = 0;
+  }
+
+  function ParseXML() {
+    $strXML = $this->xml_content;
+    $objDOM = simplexml_load_string($strXML);
+    foreach ($objDOM->node as $thisNode) {
+      $this->_ParseNode($thisNode);
+    };
+  }
+  
+  private function _ParseNode(&$objNode, & $arPoint = "") {
+    # Add this node
+    if (!$arPoint) {
+      $objNewNode = new HTML_TreeNode(array('text' => $objNode['text'], 'link' => $objNode['link'], 'icon' => 'folder.gif', 'expandedIcon' => 'folder-expanded.gif', 'expanded' => false));    
+      $newArPoint = &$objNewNode;
+    } else {
+      $newArPoint = &$arPoint->addItem(new HTML_TreeNode(array('text' => $objNode['text'], 'link' => $objNode['link'], 'icon' => 'folder.gif', 'expandedIcon' => 'folder-expanded.gif')));
+    };
+    # See if the original has any child nodes
+    foreach ($objNode->node as $thisNode) {
+      if ($thisNode['text']) {
+        $this->_ParseNode($thisNode, $newArPoint);
+      };
+    };
+    if (!empty($objNewNode)) {
+      $this->objHTMLTreeMenu->addItem($objNewNode);  
+    };
+  }
+  
+  function GenerateHandOffs() {
+    // Create the presentation class
+    $this->hanTreeHandoff = &new HTML_TreeMenu_DHTML($this->objHTMLTreeMenu, array('defaultClass' => 'treeMenuDefault'));
+    $this->hanTreeHandoff->images = 'images';  
+  }
+  
+  function GetTreeHandoff() {
+    return($this->hanTreeHandoff);
+  }
+  
+}
+?>
