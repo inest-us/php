@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
-<head><title></title></head>
+<head>
+    <title>Checkbox</title>
+</head>
 <body>
 <?php
-echo $_POST['Choice'];
+    echo $_POST['Choice'];
 ?>
 </body>
 </html>
